@@ -11,8 +11,8 @@
   DTS:LocaleID="17418"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="39"
-  DTS:VersionGUID="{242A9DEF-AA9A-45CC-B162-C152D53F8987}">
+  DTS:VersionBuild="42"
+  DTS:VersionGUID="{C0EF6817-A823-4E86-9705-61EBD736F4C4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -39,7 +39,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="review_id"
-              DTS:DTSID="{B8A76357-959E-45F3-8FD5-299BF1BF7BBF}"
+              DTS:DTSID="{DC0C2D20-0890-4221-8AE0-27C6A3A999EF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -48,7 +48,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="order_id"
-              DTS:DTSID="{3BB4211D-6226-417D-B49D-39499AD46398}"
+              DTS:DTSID="{1F7E3F95-1287-4CE1-80A6-9706458A3322}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -56,23 +56,24 @@
               DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="review_score"
-              DTS:DTSID="{2401D28A-E4AC-47D6-9E39-9A656953D72C}"
+              DTS:DTSID="{711426BE-F401-4CD0-AD5B-0DB2AC9545EF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="review_comment_title"
+              DTS:DTSID="{0CA995AD-3127-4978-9D90-98ED4E7ABA17}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
               DTS:DataType="303"
               DTS:TextQualified="True"
-              DTS:ObjectName="review_comment_title"
-              DTS:DTSID="{E77127AA-5189-42BA-8B74-D878C0E4652A}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
               DTS:ObjectName="review_comment_message"
-              DTS:DTSID="{4D232062-F9A1-4DC8-A877-EAB38CDAA031}"
+              DTS:DTSID="{D5B1D573-2C95-4ECF-846E-F95647498FC1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -80,7 +81,7 @@
               DTS:DataType="145"
               DTS:TextQualified="True"
               DTS:ObjectName="review_creation_date"
-              DTS:DTSID="{92D8D214-97CA-4410-A816-7210B2349B61}"
+              DTS:DTSID="{04C7F422-0E4B-4E88-A37A-6408D676BC7F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -88,7 +89,7 @@
               DTS:DataType="145"
               DTS:TextQualified="True"
               DTS:ObjectName="review_answer_timestamp"
-              DTS:DTSID="{208A8F70-7D9F-4C10-976A-CA5E8EEDF975}"
+              DTS:DTSID="{F805BFC0-09B8-4E3E-A5D5-C4E2A12F643C}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1035,10 +1036,11 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].Columns[review_comment_title]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
                       externalMetadataColumnId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].ExternalColumns[review_comment_title]"
+                      length="50"
                       lineageId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].Columns[review_comment_title]"
                       name="review_comment_title"
                       truncationRowDisposition="RedirectRow">
@@ -1055,12 +1057,10 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].Columns[review_comment_message]"
-                      codePage="65001"
-                      dataType="str"
+                      dataType="nText"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
                       externalMetadataColumnId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].ExternalColumns[review_comment_message]"
-                      length="255"
                       lineageId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].Columns[review_comment_message]"
                       name="review_comment_message"
                       truncationRowDisposition="RedirectRow">
@@ -1136,13 +1136,12 @@
                       name="review_score" />
                     <externalMetadataColumn
                       refId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].ExternalColumns[review_comment_title]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       name="review_comment_title" />
                     <externalMetadataColumn
                       refId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].ExternalColumns[review_comment_message]"
-                      codePage="65001"
-                      dataType="str"
-                      length="255"
+                      dataType="nText"
                       name="review_comment_message" />
                     <externalMetadataColumn
                       refId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].ExternalColumns[review_creation_date]"
@@ -2995,13 +2994,13 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[UPPER]([TRIM](#{Package\ETL Geo\DatosGeolocalización.Outputs[Flat File Source Output].Columns[geolocation_city]}))</property>
+                          name="Expression">[UPPER]([TRIM](#{Package\ETL Geo\DatosGeolocalización.Outputs[Flat File Source Output].Columns[geolocation_state]}))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">UPPER(TRIM(geolocation_city))</property>
+                          name="FriendlyExpression">UPPER(TRIM(geolocation_state))</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -4378,6 +4377,10 @@ where [refTable].[product_category_name] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\ETL Categorias"
+          TopLeft="470.138863201634,302.972220115391" />
+        <NodeLayout
           Size="132.8,41.6"
           Id="Package\ETL Cliente"
           TopLeft="460.833308154511,197.022220852154" />
@@ -4385,108 +4388,14 @@ where [refTable].[product_category_name] = ?</property>
           Size="120,41.6"
           Id="Package\ETL Geo"
           TopLeft="299.444428083522,147.622221195676" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Restricción 1]"
-          TopLeft="419.444428083522,168.422221195676">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="41.3888800709893,43.7999996564781"
-              Start="0,0"
-              End="33.8888800709893,43.7999996564781">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="19.9135751521272,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="19.9135751521272,0"
-                    Point2="23.9135751521272,0"
-                    Point3="23.9135751521272,4" />
-                  <mssgle:LineSegment
-                    End="23.9135751521272,39.7999996564781" />
-                  <mssgle:CubicBezierSegment
-                    Point1="23.9135751521272,39.7999996564781"
-                    Point2="23.9135751521272,43.7999996564781"
-                    Point3="27.9135751521272,43.7999996564781" />
-                  <mssgle:LineSegment
-                    End="33.8888800709893,43.7999996564781" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="156,41.6"
-          Id="Package\ETL Vendedores"
-          TopLeft="458.611086053706,244.977776074233" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Restricción 2]"
-          TopLeft="460.833308154511,217.822220852154">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-2.22222210080542,47.955555222079"
-              Start="0,0"
-              End="-9.72222210080542,47.955555222079">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-20.7222221008054,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-20.7222221008054,0"
-                    Point2="-24.7222221008054,0"
-                    Point3="-24.7222221008054,4" />
-                  <mssgle:LineSegment
-                    End="-24.7222221008054,43.955555222079" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-24.7222221008054,43.955555222079"
-                    Point2="-24.7222221008054,47.955555222079"
-                    Point3="-20.7222221008054,47.955555222079" />
-                  <mssgle:LineSegment
-                    End="-9.72222210080542,47.955555222079" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
           Size="147.2,41.6"
           Id="Package\ETL Productos"
           TopLeft="658.124964041636,302.522220825034" />
         <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\ETL Categorias"
-          TopLeft="470.138863201634,302.972220115391" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Restricción 3]"
-          TopLeft="620.538863201634,323.547220470213">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="37.5861008400025,0"
-              Start="0,0"
-              End="30.0861008400025,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="30.0861008400025,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="156,41.6"
+          Id="Package\ETL Vendedores"
+          TopLeft="458.611086053706,244.977776074233" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción]"
           TopLeft="458.611086053706,271.377776074233">
@@ -4521,64 +4430,32 @@ where [refTable].[product_category_name] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </Package>
-  <TaskHost
-    design-time-name="Package\ETL Cliente">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="138.4,41.6"
-          Id="Package\ETL Cliente\DatosCliente"
-          TopLeft="478.888862723555,288.599997993112" />
-        <NodeLayout
-          Size="146.4,41.6"
-          Id="Package\ETL Cliente\ItemsDeOrden"
-          TopLeft="92.499994946023,240.466666407519" />
-        <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\ETL Cliente\PagosDeOrden"
-          TopLeft="35.8333313754863,362.866666262878" />
-        <NodeLayout
-          Size="172,41.6"
-          Id="Package\ETL Cliente\CalificaciónOrdenes"
-          TopLeft="35.8333313754863,464.466666262878" />
-        <NodeLayout
-          Size="118.4,41.6"
-          Id="Package\ETL Cliente\Ordenes"
-          TopLeft="36.6666646632883,566.066666262878" />
-        <NodeLayout
-          Size="161.6,41.6"
-          Id="Package\ETL Cliente\Derived Column 1"
-          TopLeft="409.999977598589,501.26666423791" />
         <EdgeLayout
-          Id="Package\ETL Cliente.Paths[Flat File Source Output]"
-          TopLeft="548.088862723555,330.199997993112">
+          Id="Package.PrecedenceConstraints[Restricción 1]"
+          TopLeft="419.444428083522,168.422221195676">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-57.2888851249662,171.066666244798"
+              EndConnector="41.3888800709893,43.7999996564781"
               Start="0,0"
-              End="-57.2888851249662,163.566666244798">
+              End="33.8888800709893,43.7999996564781">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,81.5333331223989" />
+                    End="19.9135751521272,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,81.5333331223989"
-                    Point2="0,85.5333331223989"
-                    Point3="-4,85.5333331223989" />
+                    Point1="19.9135751521272,0"
+                    Point2="23.9135751521272,0"
+                    Point3="23.9135751521272,4" />
                   <mssgle:LineSegment
-                    End="-53.2888851249662,85.5333331223989" />
+                    End="23.9135751521272,39.7999996564781" />
                   <mssgle:CubicBezierSegment
-                    Point1="-53.2888851249662,85.5333331223989"
-                    Point2="-57.2888851249662,85.5333331223989"
-                    Point3="-57.2888851249662,89.5333331223989" />
+                    Point1="23.9135751521272,39.7999996564781"
+                    Point2="23.9135751521272,43.7999996564781"
+                    Point3="27.9135751521272,43.7999996564781" />
                   <mssgle:LineSegment
-                    End="-57.2888851249662,163.566666244798" />
+                    End="33.8888800709893,43.7999996564781" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4587,10 +4464,165 @@ where [refTable].[product_category_name] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 2]"
+          TopLeft="460.833308154511,217.822220852154">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-2.22222210080542,47.955555222079"
+              Start="0,0"
+              End="-9.72222210080542,47.955555222079">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-20.7222221008054,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-20.7222221008054,0"
+                    Point2="-24.7222221008054,0"
+                    Point3="-24.7222221008054,4" />
+                  <mssgle:LineSegment
+                    End="-24.7222221008054,43.955555222079" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-24.7222221008054,43.955555222079"
+                    Point2="-24.7222221008054,47.955555222079"
+                    Point3="-20.7222221008054,47.955555222079" />
+                  <mssgle:LineSegment
+                    End="-9.72222210080542,47.955555222079" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 3]"
+          TopLeft="620.538863201634,323.547220470213">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="37.5861008400025,0"
+              Start="0,0"
+              End="30.0861008400025,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="30.0861008400025,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\ETL Categorias">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="188,41.6"
+          Id="Package\ETL Categorias\DestinoTabla Categoria"
+          TopLeft="268.999995991588,148.999997779727" />
+        <NodeLayout
+          Size="219.2,41.6"
+          Id="Package\ETL Categorias\CategoriaDeProductoEnIngles"
+          TopLeft="60.9999999850988,60" />
+        <EdgeLayout
+          Id="Package\ETL Categorias.Paths[Flat File Source Output]"
+          TopLeft="170.599999985099,101.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="192.399996006489,47.399997779727"
+              Start="0,0"
+              End="192.399996006489,39.899997779727">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.6999988898635" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.6999988898635"
+                    Point2="0,23.6999988898635"
+                    Point3="4,23.6999988898635" />
+                  <mssgle:LineSegment
+                    End="188.399996006489,23.6999988898635" />
+                  <mssgle:CubicBezierSegment
+                    Point1="188.399996006489,23.6999988898635"
+                    Point2="192.399996006489,23.6999988898635"
+                    Point3="192.399996006489,27.6999988898635" />
+                  <mssgle:LineSegment
+                    End="192.399996006489,39.899997779727" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL Categorias\DestinoTabla Categoria">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\ETL Cliente">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\ETL Cliente\PagosDeOrden"
+          TopLeft="35.8333313754863,362.866666262878" />
+        <NodeLayout
+          Size="146.4,41.6"
+          Id="Package\ETL Cliente\ItemsDeOrden"
+          TopLeft="92.499994946023,240.466666407519" />
+        <NodeLayout
+          Size="183.2,41.6"
+          Id="Package\ETL Cliente\Destino Tabla Clientes"
+          TopLeft="751.011863728425,616.392856681169" />
+        <NodeLayout
+          Size="118.4,41.6"
+          Id="Package\ETL Cliente\Ordenes"
+          TopLeft="36.6666646632883,566.066666262878" />
+        <NodeLayout
+          Size="138.4,41.6"
+          Id="Package\ETL Cliente\DatosCliente"
+          TopLeft="478.888862723555,288.599997993112" />
+        <NodeLayout
+          Size="172,41.6"
+          Id="Package\ETL Cliente\CalificaciónOrdenes"
+          TopLeft="35.8333313754863,464.466666262878" />
         <NodeLayout
           Size="112.8,41.6"
           Id="Package\ETL Cliente\Lookup"
           TopLeft="479.999973773958,622.799997071028" />
+        <NodeLayout
+          Size="161.6,41.6"
+          Id="Package\ETL Cliente\Derived Column 1"
+          TopLeft="409.999977598589,501.26666423791" />
         <EdgeLayout
           Id="Package\ETL Cliente.Paths[Derived Column Output]"
           TopLeft="490.799977598589,542.86666423791">
@@ -4625,10 +4657,6 @@ where [refTable].[product_category_name] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="183.2,41.6"
-          Id="Package\ETL Cliente\Destino Tabla Clientes"
-          TopLeft="751.011863728425,616.392856681169" />
         <EdgeLayout
           Id="Package\ETL Cliente.Paths[Lookup Match Output]"
           TopLeft="592.799973773958,640.396426876099">
@@ -4649,36 +4677,47 @@ where [refTable].[product_category_name] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="27.1645582584839,5,96.3827734375,11.609375"
+              BoundingBox="27.164558258484,5,96.3827734375,11.609375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL Cliente.Paths[Flat File Source Output]"
+          TopLeft="548.088862723555,330.199997993112">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-57.2888851249662,171.066666244798"
+              Start="0,0"
+              End="-57.2888851249662,163.566666244798">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,81.5333331223989" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,81.5333331223989"
+                    Point2="0,85.5333331223989"
+                    Point3="-4,85.5333331223989" />
+                  <mssgle:LineSegment
+                    End="-53.2888851249662,85.5333331223989" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-53.2888851249662,85.5333331223989"
+                    Point2="-57.2888851249662,85.5333331223989"
+                    Point3="-57.2888851249662,89.5333331223989" />
+                  <mssgle:LineSegment
+                    End="-57.2888851249662,163.566666244798" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\ETL Cliente\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Geolocation]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\ETL Cliente\Destino Tabla Clientes">
     <Properties>
@@ -4692,15 +4731,38 @@ where [refTable].[product_category_name] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL Cliente\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Geolocation]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\ETL Geo">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="179.2,41.6"
-          Id="Package\ETL Geo\DatosGeolocalización"
-          TopLeft="112.847219334778,60" />
+          Size="216,41.6"
+          Id="Package\ETL Geo\DestinoTabla Geolocalización"
+          TopLeft="60,391.527778917325" />
         <NodeLayout
           Size="126.4,41.6"
           Id="Package\ETL Geo\Aggregate"
@@ -4710,9 +4772,9 @@ where [refTable].[product_category_name] = ?</property>
           Id="Package\ETL Geo\Derived Column"
           TopLeft="102.013886593352,159.466665557755" />
         <NodeLayout
-          Size="216,41.6"
-          Id="Package\ETL Geo\DestinoTabla Geolocalización"
-          TopLeft="60,391.527778917325" />
+          Size="179.2,41.6"
+          Id="Package\ETL Geo\DatosGeolocalización"
+          TopLeft="112.847219334778,60" />
         <EdgeLayout
           Id="Package\ETL Geo.Paths[Derived Column Output]"
           TopLeft="178.413886593352,201.066665557755">
@@ -4819,153 +4881,18 @@ where [refTable].[product_category_name] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <TaskHost
-    design-time-name="Package\ETL Vendedores">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="134.4,41.6"
-          Id="Package\ETL Vendedores\Vendedores"
-          TopLeft="219.999997615814,60" />
-        <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\ETL Vendedores\Derived Column"
-          TopLeft="186.999997213483,163.99999755621" />
-        <EdgeLayout
-          Id="Package\ETL Vendedores.Paths[Flat File Source Output]"
-          TopLeft="287.199997615814,101.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-23.8000004023314,62.3999975562096"
-              Start="0,0"
-              End="-23.8000004023314,54.8999975562096">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.1999987781048" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,27.1999987781048"
-                    Point2="0,31.1999987781048"
-                    Point3="-4,31.1999987781048" />
-                  <mssgle:LineSegment
-                    End="-19.8000004023314,31.1999987781048" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-19.8000004023314,31.1999987781048"
-                    Point2="-23.8000004023314,31.1999987781048"
-                    Point3="-23.8000004023314,35.1999987781048" />
-                  <mssgle:LineSegment
-                    End="-23.8000004023314,54.8999975562096" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="198.4,41.6"
-          Id="Package\ETL Vendedores\DestinoTabla Vendedores"
-          TopLeft="181.999997287989,257.9999961555" />
-        <EdgeLayout
-          Id="Package\ETL Vendedores.Paths[Derived Column Output]"
-          TopLeft="263.399997213483,205.59999755621">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="17.8000000745058,52.3999985992909"
-              Start="0,0"
-              End="17.8000000745058,44.8999985992909">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,22.1999992996454" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22.1999992996454"
-                    Point2="0,26.1999992996454"
-                    Point3="4,26.1999992996454" />
-                  <mssgle:LineSegment
-                    End="13.8000000745058,26.1999992996454" />
-                  <mssgle:CubicBezierSegment
-                    Point1="13.8000000745058,26.1999992996454"
-                    Point2="17.8000000745058,26.1999992996454"
-                    Point3="17.8000000745058,30.1999992996454" />
-                  <mssgle:LineSegment
-                    End="17.8000000745058,44.8999985992909" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\ETL Vendedores\DestinoTabla Vendedores">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
     design-time-name="Package\ETL Productos">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="125.6,41.6"
-          Id="Package\ETL Productos\Productos"
-          TopLeft="60,60" />
-        <NodeLayout
           Size="152.8,41.6"
           Id="Package\ETL Productos\Valida categoria"
           TopLeft="256.999996170402,127.999998092651" />
-        <EdgeLayout
-          Id="Package\ETL Productos.Paths[Flat File Source Output]"
-          TopLeft="122.8,101.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="210.599996170402,26.3999980926514"
-              Start="0,0"
-              End="210.599996170402,18.8999980926514">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,9.19999904632569" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,9.19999904632569"
-                    Point2="0,13.1999990463257"
-                    Point3="4,13.1999990463257" />
-                  <mssgle:LineSegment
-                    End="206.599996170402,13.1999990463257" />
-                  <mssgle:CubicBezierSegment
-                    Point1="206.599996170402,13.1999990463257"
-                    Point2="210.599996170402,13.1999990463257"
-                    Point3="210.599996170402,17.1999990463257" />
-                  <mssgle:LineSegment
-                    End="210.599996170402,18.8999980926514" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="125.6,41.6"
+          Id="Package\ETL Productos\Productos"
+          TopLeft="60,60" />
         <NodeLayout
           Size="171.2,41.6"
           Id="Package\ETL Productos\OLE DB Destination"
@@ -5006,48 +4933,158 @@ where [refTable].[product_category_name] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\ETL Categorias">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="219.2,41.6"
-          Id="Package\ETL Categorias\CategoriaDeProductoEnIngles"
-          TopLeft="60.9999999850988,60" />
-        <NodeLayout
-          Size="188,41.6"
-          Id="Package\ETL Categorias\DestinoTabla Categoria"
-          TopLeft="268.999995991588,148.999997779727" />
         <EdgeLayout
-          Id="Package\ETL Categorias.Paths[Flat File Source Output]"
-          TopLeft="170.599999985099,101.6">
+          Id="Package\ETL Productos.Paths[Flat File Source Output]"
+          TopLeft="122.8,101.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="192.399996006489,47.399997779727"
+              EndConnector="210.599996170402,26.3999980926514"
               Start="0,0"
-              End="192.399996006489,39.899997779727">
+              End="210.599996170402,18.8999980926514">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.6999988898635" />
+                    End="0,9.19999904632569" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,19.6999988898635"
-                    Point2="0,23.6999988898635"
-                    Point3="4,23.6999988898635" />
+                    Point1="0,9.19999904632569"
+                    Point2="0,13.1999990463257"
+                    Point3="4,13.1999990463257" />
                   <mssgle:LineSegment
-                    End="188.399996006489,23.6999988898635" />
+                    End="206.599996170402,13.1999990463257" />
                   <mssgle:CubicBezierSegment
-                    Point1="188.399996006489,23.6999988898635"
-                    Point2="192.399996006489,23.6999988898635"
-                    Point3="192.399996006489,27.6999988898635" />
+                    Point1="206.599996170402,13.1999990463257"
+                    Point2="210.599996170402,13.1999990463257"
+                    Point3="210.599996170402,17.1999990463257" />
                   <mssgle:LineSegment
-                    End="192.399996006489,39.899997779727" />
+                    End="210.599996170402,18.8999980926514" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL Productos\Valida categoria">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[ProductCategoryTranslation]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL Productos\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\ETL Vendedores">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="198.4,41.6"
+          Id="Package\ETL Vendedores\DestinoTabla Vendedores"
+          TopLeft="181.999997287989,257.9999961555" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\ETL Vendedores\Derived Column"
+          TopLeft="186.999997213483,163.99999755621" />
+        <NodeLayout
+          Size="134.4,41.6"
+          Id="Package\ETL Vendedores\Vendedores"
+          TopLeft="219.999997615814,60" />
+        <EdgeLayout
+          Id="Package\ETL Vendedores.Paths[Flat File Source Output]"
+          TopLeft="287.199997615814,101.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-23.8000004023314,62.3999975562096"
+              Start="0,0"
+              End="-23.8000004023314,54.8999975562096">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.1999987781048" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.1999987781048"
+                    Point2="0,31.1999987781048"
+                    Point3="-4,31.1999987781048" />
+                  <mssgle:LineSegment
+                    End="-19.8000004023314,31.1999987781048" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-19.8000004023314,31.1999987781048"
+                    Point2="-23.8000004023314,31.1999987781048"
+                    Point3="-23.8000004023314,35.1999987781048" />
+                  <mssgle:LineSegment
+                    End="-23.8000004023314,54.8999975562096" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL Vendedores.Paths[Derived Column Output]"
+          TopLeft="263.399997213483,205.59999755621">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="17.8000000745058,52.3999985992909"
+              Start="0,0"
+              End="17.8000000745058,44.8999985992909">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.1999992996454" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.1999992996454"
+                    Point2="0,26.1999992996454"
+                    Point3="4,26.1999992996454" />
+                  <mssgle:LineSegment
+                    End="13.8000000745058,26.1999992996454" />
+                  <mssgle:CubicBezierSegment
+                    Point1="13.8000000745058,26.1999992996454"
+                    Point2="17.8000000745058,26.1999992996454"
+                    Point3="17.8000000745058,30.1999992996454" />
+                  <mssgle:LineSegment
+                    End="17.8000000745058,44.8999985992909" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5060,43 +5097,7 @@ where [refTable].[product_category_name] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\ETL Categorias\DestinoTabla Categoria">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\ETL Productos\Valida categoria">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[ProductCategoryTranslation]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\ETL Productos\OLE DB Destination">
+    design-time-name="Package\ETL Vendedores\DestinoTabla Vendedores">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
