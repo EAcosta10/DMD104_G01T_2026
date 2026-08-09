@@ -11,8 +11,8 @@
   DTS:LocaleID="17418"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="42"
-  DTS:VersionGUID="{C0EF6817-A823-4E86-9705-61EBD736F4C4}">
+  DTS:VersionBuild="48"
+  DTS:VersionGUID="{613A0C66-7139-4D98-8CA5-1A3FE45758F6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -39,7 +39,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="review_id"
-              DTS:DTSID="{DC0C2D20-0890-4221-8AE0-27C6A3A999EF}"
+              DTS:DTSID="{B2DEFC1B-8EF0-4AFD-917A-6545FD1913D8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -48,7 +48,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="order_id"
-              DTS:DTSID="{1F7E3F95-1287-4CE1-80A6-9706458A3322}"
+              DTS:DTSID="{1C6A4860-30A6-407C-B76B-4ECA9552CB7A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -56,16 +56,16 @@
               DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="review_score"
-              DTS:DTSID="{711426BE-F401-4CD0-AD5B-0DB2AC9545EF}"
+              DTS:DTSID="{4CB1E395-8B3D-4CDA-996B-AB4750FB2355}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="500"
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="review_comment_title"
-              DTS:DTSID="{0CA995AD-3127-4978-9D90-98ED4E7ABA17}"
+              DTS:DTSID="{9AE25E28-D471-42C2-8A15-986525157885}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -73,7 +73,7 @@
               DTS:DataType="303"
               DTS:TextQualified="True"
               DTS:ObjectName="review_comment_message"
-              DTS:DTSID="{D5B1D573-2C95-4ECF-846E-F95647498FC1}"
+              DTS:DTSID="{44BBC539-A14A-4B55-B619-EC6F9EDBE610}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -81,7 +81,7 @@
               DTS:DataType="145"
               DTS:TextQualified="True"
               DTS:ObjectName="review_creation_date"
-              DTS:DTSID="{04C7F422-0E4B-4E88-A37A-6408D676BC7F}"
+              DTS:DTSID="{61F67D18-041C-4678-A37D-C1F1E9E03591}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -89,7 +89,7 @@
               DTS:DataType="145"
               DTS:TextQualified="True"
               DTS:ObjectName="review_answer_timestamp"
-              DTS:DTSID="{F805BFC0-09B8-4E3E-A5D5-C4E2A12F643C}"
+              DTS:DTSID="{708C3548-61C1-44E4-BFB5-0493CA252802}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -940,249 +940,6 @@
           version="1">
           <components>
             <component
-              refId="Package\ETL Cliente\CalificaciónOrdenes"
-              componentClassID="Microsoft.FlatFileSource"
-              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Source"
-              localeId="17418"
-              name="CalificaciónOrdenes"
-              usesDispositions="true"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether zero-length columns are treated as null."
-                  name="RetainNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
-                  name="FileNameColumnName"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\ETL Cliente\CalificaciónOrdenes.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[ConexiónCalificaciónOrden]"
-                  connectionManagerRefId="Package.ConnectionManagers[ConexiónCalificaciónOrden]"
-                  name="FlatFileConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output]"
-                  name="Flat File Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].Columns[review_id]"
-                      codePage="65001"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].ExternalColumns[review_id]"
-                      length="32"
-                      lineageId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].Columns[review_id]"
-                      name="review_id"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].Columns[order_id]"
-                      codePage="65001"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].ExternalColumns[order_id]"
-                      length="32"
-                      lineageId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].Columns[order_id]"
-                      name="order_id"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].Columns[review_score]"
-                      dataType="ui1"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].ExternalColumns[review_score]"
-                      lineageId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].Columns[review_score]"
-                      name="review_score"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].Columns[review_comment_title]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].ExternalColumns[review_comment_title]"
-                      length="50"
-                      lineageId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].Columns[review_comment_title]"
-                      name="review_comment_title"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].Columns[review_comment_message]"
-                      dataType="nText"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].ExternalColumns[review_comment_message]"
-                      lineageId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].Columns[review_comment_message]"
-                      name="review_comment_message"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].Columns[review_creation_date]"
-                      dataType="dbTime2"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].ExternalColumns[review_creation_date]"
-                      lineageId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].Columns[review_creation_date]"
-                      name="review_creation_date"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].Columns[review_answer_timestamp]"
-                      dataType="dbTime2"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].ExternalColumns[review_answer_timestamp]"
-                      lineageId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].Columns[review_answer_timestamp]"
-                      name="review_answer_timestamp"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].ExternalColumns[review_id]"
-                      codePage="65001"
-                      dataType="str"
-                      length="32"
-                      name="review_id" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].ExternalColumns[order_id]"
-                      codePage="65001"
-                      dataType="str"
-                      length="32"
-                      name="order_id" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].ExternalColumns[review_score]"
-                      dataType="ui1"
-                      name="review_score" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].ExternalColumns[review_comment_title]"
-                      dataType="wstr"
-                      length="50"
-                      name="review_comment_title" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].ExternalColumns[review_comment_message]"
-                      dataType="nText"
-                      name="review_comment_message" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].ExternalColumns[review_creation_date]"
-                      dataType="dbTime2"
-                      name="review_creation_date" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Output].ExternalColumns[review_answer_timestamp]"
-                      dataType="dbTime2"
-                      name="review_answer_timestamp" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Error Output]"
-                  isErrorOut="true"
-                  name="Flat File Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      codePage="65001"
-                      dataType="text"
-                      description="Flat File Source Error Output Column"
-                      lineageId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      name="Flat File Source Error Output Column" />
-                    <outputColumn
-                      refId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\ETL Cliente\CalificaciónOrdenes.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\ETL Cliente\DatosCliente"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -1632,235 +1389,6 @@
               </outputs>
             </component>
             <component
-              refId="Package\ETL Cliente\ItemsDeOrden"
-              componentClassID="Microsoft.FlatFileSource"
-              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Source"
-              localeId="17418"
-              name="ItemsDeOrden"
-              usesDispositions="true"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether zero-length columns are treated as null."
-                  name="RetainNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
-                  name="FileNameColumnName"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\ETL Cliente\ItemsDeOrden.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[ConexiónItemsOrden]"
-                  connectionManagerRefId="Package.ConnectionManagers[ConexiónItemsOrden]"
-                  name="FlatFileConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\ETL Cliente\ItemsDeOrden.Outputs[Flat File Source Output]"
-                  name="Flat File Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\ETL Cliente\ItemsDeOrden.Outputs[Flat File Source Output].Columns[&quot;order_id&quot;]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\ETL Cliente\ItemsDeOrden.Outputs[Flat File Source Output].ExternalColumns[&quot;order_id&quot;]"
-                      length="32"
-                      lineageId="Package\ETL Cliente\ItemsDeOrden.Outputs[Flat File Source Output].Columns[&quot;order_id&quot;]"
-                      name="&quot;order_id&quot;"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ETL Cliente\ItemsDeOrden.Outputs[Flat File Source Output].Columns[&quot;order_item_id&quot;]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\ETL Cliente\ItemsDeOrden.Outputs[Flat File Source Output].ExternalColumns[&quot;order_item_id&quot;]"
-                      lineageId="Package\ETL Cliente\ItemsDeOrden.Outputs[Flat File Source Output].Columns[&quot;order_item_id&quot;]"
-                      name="&quot;order_item_id&quot;"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ETL Cliente\ItemsDeOrden.Outputs[Flat File Source Output].Columns[&quot;product_id&quot;]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\ETL Cliente\ItemsDeOrden.Outputs[Flat File Source Output].ExternalColumns[&quot;product_id&quot;]"
-                      length="32"
-                      lineageId="Package\ETL Cliente\ItemsDeOrden.Outputs[Flat File Source Output].Columns[&quot;product_id&quot;]"
-                      name="&quot;product_id&quot;"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ETL Cliente\ItemsDeOrden.Outputs[Flat File Source Output].Columns[&quot;seller_id&quot;]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\ETL Cliente\ItemsDeOrden.Outputs[Flat File Source Output].ExternalColumns[&quot;seller_id&quot;]"
-                      length="32"
-                      lineageId="Package\ETL Cliente\ItemsDeOrden.Outputs[Flat File Source Output].Columns[&quot;seller_id&quot;]"
-                      name="&quot;seller_id&quot;"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ETL Cliente\ItemsDeOrden.Outputs[Flat File Source Output].Columns[&quot;price&quot;]"
-                      dataType="numeric"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\ETL Cliente\ItemsDeOrden.Outputs[Flat File Source Output].ExternalColumns[&quot;price&quot;]"
-                      lineageId="Package\ETL Cliente\ItemsDeOrden.Outputs[Flat File Source Output].Columns[&quot;price&quot;]"
-                      name="&quot;price&quot;"
-                      precision="18"
-                      scale="2"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ETL Cliente\ItemsDeOrden.Outputs[Flat File Source Output].Columns[&quot;freight_value&quot;]"
-                      dataType="numeric"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\ETL Cliente\ItemsDeOrden.Outputs[Flat File Source Output].ExternalColumns[&quot;freight_value&quot;]"
-                      lineageId="Package\ETL Cliente\ItemsDeOrden.Outputs[Flat File Source Output].Columns[&quot;freight_value&quot;]"
-                      name="&quot;freight_value&quot;"
-                      precision="18"
-                      scale="2"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\ETL Cliente\ItemsDeOrden.Outputs[Flat File Source Output].ExternalColumns[&quot;order_id&quot;]"
-                      codePage="1252"
-                      dataType="str"
-                      length="32"
-                      name="&quot;order_id&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Cliente\ItemsDeOrden.Outputs[Flat File Source Output].ExternalColumns[&quot;order_item_id&quot;]"
-                      dataType="i4"
-                      name="&quot;order_item_id&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Cliente\ItemsDeOrden.Outputs[Flat File Source Output].ExternalColumns[&quot;product_id&quot;]"
-                      codePage="1252"
-                      dataType="str"
-                      length="32"
-                      name="&quot;product_id&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Cliente\ItemsDeOrden.Outputs[Flat File Source Output].ExternalColumns[&quot;seller_id&quot;]"
-                      codePage="1252"
-                      dataType="str"
-                      length="32"
-                      name="&quot;seller_id&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Cliente\ItemsDeOrden.Outputs[Flat File Source Output].ExternalColumns[&quot;price&quot;]"
-                      dataType="numeric"
-                      name="&quot;price&quot;"
-                      precision="18"
-                      scale="2" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Cliente\ItemsDeOrden.Outputs[Flat File Source Output].ExternalColumns[&quot;freight_value&quot;]"
-                      dataType="numeric"
-                      name="&quot;freight_value&quot;"
-                      precision="18"
-                      scale="2" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\ETL Cliente\ItemsDeOrden.Outputs[Flat File Source Error Output]"
-                  isErrorOut="true"
-                  name="Flat File Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\ETL Cliente\ItemsDeOrden.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      codePage="1252"
-                      dataType="text"
-                      description="Flat File Source Error Output Column"
-                      lineageId="Package\ETL Cliente\ItemsDeOrden.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      name="Flat File Source Error Output Column" />
-                    <outputColumn
-                      refId="Package\ETL Cliente\ItemsDeOrden.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\ETL Cliente\ItemsDeOrden.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\ETL Cliente\ItemsDeOrden.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\ETL Cliente\ItemsDeOrden.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\ETL Cliente\Lookup"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
@@ -1996,472 +1524,6 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
                       refId="Package\ETL Cliente\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\ETL Cliente\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\ETL Cliente\Ordenes"
-              componentClassID="Microsoft.FlatFileSource"
-              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Source"
-              localeId="17418"
-              name="Ordenes"
-              usesDispositions="true"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether zero-length columns are treated as null."
-                  name="RetainNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
-                  name="FileNameColumnName"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\ETL Cliente\Ordenes.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[ConexiónOrdenes]"
-                  connectionManagerRefId="Package.ConnectionManagers[ConexiónOrdenes]"
-                  name="FlatFileConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Output]"
-                  name="Flat File Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Output].Columns[order_id]"
-                      codePage="65001"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Output].ExternalColumns[order_id]"
-                      length="32"
-                      lineageId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Output].Columns[order_id]"
-                      name="order_id"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Output].Columns[customer_id]"
-                      codePage="65001"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Output].ExternalColumns[customer_id]"
-                      length="32"
-                      lineageId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Output].Columns[customer_id]"
-                      name="customer_id"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Output].Columns[order_status]"
-                      codePage="65001"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Output].ExternalColumns[order_status]"
-                      length="20"
-                      lineageId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Output].Columns[order_status]"
-                      name="order_status"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Output].Columns[order_purchase_timestamp]"
-                      dataType="dbTimeStamp2"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Output].ExternalColumns[order_purchase_timestamp]"
-                      lineageId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Output].Columns[order_purchase_timestamp]"
-                      name="order_purchase_timestamp"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Output].Columns[order_approved_at]"
-                      dataType="dbTime2"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Output].ExternalColumns[order_approved_at]"
-                      lineageId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Output].Columns[order_approved_at]"
-                      name="order_approved_at"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Output].Columns[order_delivered_carrier_date]"
-                      dataType="dbTimeStamp2"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Output].ExternalColumns[order_delivered_carrier_date]"
-                      lineageId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Output].Columns[order_delivered_carrier_date]"
-                      name="order_delivered_carrier_date"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Output].Columns[order_delivered_customer_date]"
-                      dataType="dbTimeStamp2"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Output].ExternalColumns[order_delivered_customer_date]"
-                      lineageId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Output].Columns[order_delivered_customer_date]"
-                      name="order_delivered_customer_date"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Output].Columns[order_estimated_delivery_date]"
-                      dataType="dbTimeStamp2"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Output].ExternalColumns[order_estimated_delivery_date]"
-                      lineageId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Output].Columns[order_estimated_delivery_date]"
-                      name="order_estimated_delivery_date"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Output].ExternalColumns[order_id]"
-                      codePage="65001"
-                      dataType="str"
-                      length="32"
-                      name="order_id" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Output].ExternalColumns[customer_id]"
-                      codePage="65001"
-                      dataType="str"
-                      length="32"
-                      name="customer_id" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Output].ExternalColumns[order_status]"
-                      codePage="65001"
-                      dataType="str"
-                      length="20"
-                      name="order_status" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Output].ExternalColumns[order_purchase_timestamp]"
-                      dataType="dbTimeStamp2"
-                      name="order_purchase_timestamp" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Output].ExternalColumns[order_approved_at]"
-                      dataType="dbTime2"
-                      name="order_approved_at" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Output].ExternalColumns[order_delivered_carrier_date]"
-                      dataType="dbTimeStamp2"
-                      name="order_delivered_carrier_date" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Output].ExternalColumns[order_delivered_customer_date]"
-                      dataType="dbTimeStamp2"
-                      name="order_delivered_customer_date" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Output].ExternalColumns[order_estimated_delivery_date]"
-                      dataType="dbTimeStamp2"
-                      name="order_estimated_delivery_date" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Error Output]"
-                  isErrorOut="true"
-                  name="Flat File Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      codePage="65001"
-                      dataType="text"
-                      description="Flat File Source Error Output Column"
-                      lineageId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      name="Flat File Source Error Output Column" />
-                    <outputColumn
-                      refId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\ETL Cliente\Ordenes.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\ETL Cliente\PagosDeOrden"
-              componentClassID="Microsoft.FlatFileSource"
-              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Source"
-              localeId="17418"
-              name="PagosDeOrden"
-              usesDispositions="true"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether zero-length columns are treated as null."
-                  name="RetainNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
-                  name="FileNameColumnName"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\ETL Cliente\PagosDeOrden.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[ConexiónPago]"
-                  connectionManagerRefId="Package.ConnectionManagers[ConexiónPago]"
-                  name="FlatFileConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\ETL Cliente\PagosDeOrden.Outputs[Flat File Source Output]"
-                  name="Flat File Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\ETL Cliente\PagosDeOrden.Outputs[Flat File Source Output].Columns[order_id]"
-                      codePage="65001"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\ETL Cliente\PagosDeOrden.Outputs[Flat File Source Output].ExternalColumns[order_id]"
-                      length="32"
-                      lineageId="Package\ETL Cliente\PagosDeOrden.Outputs[Flat File Source Output].Columns[order_id]"
-                      name="order_id"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ETL Cliente\PagosDeOrden.Outputs[Flat File Source Output].Columns[payment_sequential]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\ETL Cliente\PagosDeOrden.Outputs[Flat File Source Output].ExternalColumns[payment_sequential]"
-                      lineageId="Package\ETL Cliente\PagosDeOrden.Outputs[Flat File Source Output].Columns[payment_sequential]"
-                      name="payment_sequential"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ETL Cliente\PagosDeOrden.Outputs[Flat File Source Output].Columns[payment_type]"
-                      codePage="65001"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\ETL Cliente\PagosDeOrden.Outputs[Flat File Source Output].ExternalColumns[payment_type]"
-                      length="20"
-                      lineageId="Package\ETL Cliente\PagosDeOrden.Outputs[Flat File Source Output].Columns[payment_type]"
-                      name="payment_type"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ETL Cliente\PagosDeOrden.Outputs[Flat File Source Output].Columns[payment_installments]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\ETL Cliente\PagosDeOrden.Outputs[Flat File Source Output].ExternalColumns[payment_installments]"
-                      lineageId="Package\ETL Cliente\PagosDeOrden.Outputs[Flat File Source Output].Columns[payment_installments]"
-                      name="payment_installments"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ETL Cliente\PagosDeOrden.Outputs[Flat File Source Output].Columns[payment_value]"
-                      dataType="numeric"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\ETL Cliente\PagosDeOrden.Outputs[Flat File Source Output].ExternalColumns[payment_value]"
-                      lineageId="Package\ETL Cliente\PagosDeOrden.Outputs[Flat File Source Output].Columns[payment_value]"
-                      name="payment_value"
-                      precision="18"
-                      scale="2"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\ETL Cliente\PagosDeOrden.Outputs[Flat File Source Output].ExternalColumns[order_id]"
-                      codePage="65001"
-                      dataType="str"
-                      length="32"
-                      name="order_id" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Cliente\PagosDeOrden.Outputs[Flat File Source Output].ExternalColumns[payment_sequential]"
-                      dataType="i4"
-                      name="payment_sequential" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Cliente\PagosDeOrden.Outputs[Flat File Source Output].ExternalColumns[payment_type]"
-                      codePage="65001"
-                      dataType="str"
-                      length="20"
-                      name="payment_type" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Cliente\PagosDeOrden.Outputs[Flat File Source Output].ExternalColumns[payment_installments]"
-                      dataType="i4"
-                      name="payment_installments" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Cliente\PagosDeOrden.Outputs[Flat File Source Output].ExternalColumns[payment_value]"
-                      dataType="numeric"
-                      name="payment_value"
-                      precision="18"
-                      scale="2" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\ETL Cliente\PagosDeOrden.Outputs[Flat File Source Error Output]"
-                  isErrorOut="true"
-                  name="Flat File Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\ETL Cliente\PagosDeOrden.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      codePage="65001"
-                      dataType="text"
-                      description="Flat File Source Error Output Column"
-                      lineageId="Package\ETL Cliente\PagosDeOrden.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      name="Flat File Source Error Output Column" />
-                    <outputColumn
-                      refId="Package\ETL Cliente\PagosDeOrden.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\ETL Cliente\PagosDeOrden.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\ETL Cliente\PagosDeOrden.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\ETL Cliente\PagosDeOrden.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -3230,6 +2292,962 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
               name="Flat File Source Output"
               startId="Package\ETL Geo\DatosGeolocalización.Outputs[Flat File Source Output]" />
           </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\ETL Ordenes"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{82F9F7D4-FDFA-4474-BC75-CC00490A3B04}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="ETL Ordenes"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\ETL Ordenes\CalificaciónOrdenes"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="17418"
+              name="CalificaciónOrdenes"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL Ordenes\CalificaciónOrdenes.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ConexiónCalificaciónOrden]"
+                  connectionManagerRefId="Package.ConnectionManagers[ConexiónCalificaciónOrden]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Output].Columns[review_id]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Output].ExternalColumns[review_id]"
+                      length="32"
+                      lineageId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Output].Columns[review_id]"
+                      name="review_id"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Output].Columns[order_id]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Output].ExternalColumns[order_id]"
+                      length="32"
+                      lineageId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Output].Columns[order_id]"
+                      name="order_id"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Output].Columns[review_score]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Output].ExternalColumns[review_score]"
+                      lineageId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Output].Columns[review_score]"
+                      name="review_score"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Output].Columns[review_comment_title]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Output].ExternalColumns[review_comment_title]"
+                      length="500"
+                      lineageId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Output].Columns[review_comment_title]"
+                      name="review_comment_title"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Output].Columns[review_comment_message]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Output].ExternalColumns[review_comment_message]"
+                      lineageId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Output].Columns[review_comment_message]"
+                      name="review_comment_message"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Output].Columns[review_creation_date]"
+                      dataType="dbTime2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Output].ExternalColumns[review_creation_date]"
+                      lineageId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Output].Columns[review_creation_date]"
+                      name="review_creation_date"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Output].Columns[review_answer_timestamp]"
+                      dataType="dbTime2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Output].ExternalColumns[review_answer_timestamp]"
+                      lineageId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Output].Columns[review_answer_timestamp]"
+                      name="review_answer_timestamp"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Output].ExternalColumns[review_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="32"
+                      name="review_id" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Output].ExternalColumns[order_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="32"
+                      name="order_id" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Output].ExternalColumns[review_score]"
+                      dataType="ui1"
+                      name="review_score" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Output].ExternalColumns[review_comment_title]"
+                      dataType="wstr"
+                      length="500"
+                      name="review_comment_title" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Output].ExternalColumns[review_comment_message]"
+                      dataType="nText"
+                      name="review_comment_message" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Output].ExternalColumns[review_creation_date]"
+                      dataType="dbTime2"
+                      name="review_creation_date" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Output].ExternalColumns[review_answer_timestamp]"
+                      dataType="dbTime2"
+                      name="review_answer_timestamp" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL Ordenes\CalificaciónOrdenes.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL Ordenes\ItemsDeOrden"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="17418"
+              name="ItemsDeOrden"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL Ordenes\ItemsDeOrden.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ConexiónItemsOrden]"
+                  connectionManagerRefId="Package.ConnectionManagers[ConexiónItemsOrden]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\ETL Ordenes\ItemsDeOrden.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Ordenes\ItemsDeOrden.Outputs[Flat File Source Output].Columns[&quot;order_id&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\ETL Ordenes\ItemsDeOrden.Outputs[Flat File Source Output].ExternalColumns[&quot;order_id&quot;]"
+                      length="32"
+                      lineageId="Package\ETL Ordenes\ItemsDeOrden.Outputs[Flat File Source Output].Columns[&quot;order_id&quot;]"
+                      name="&quot;order_id&quot;"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Ordenes\ItemsDeOrden.Outputs[Flat File Source Output].Columns[&quot;order_item_id&quot;]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\ETL Ordenes\ItemsDeOrden.Outputs[Flat File Source Output].ExternalColumns[&quot;order_item_id&quot;]"
+                      lineageId="Package\ETL Ordenes\ItemsDeOrden.Outputs[Flat File Source Output].Columns[&quot;order_item_id&quot;]"
+                      name="&quot;order_item_id&quot;"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Ordenes\ItemsDeOrden.Outputs[Flat File Source Output].Columns[&quot;product_id&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\ETL Ordenes\ItemsDeOrden.Outputs[Flat File Source Output].ExternalColumns[&quot;product_id&quot;]"
+                      length="32"
+                      lineageId="Package\ETL Ordenes\ItemsDeOrden.Outputs[Flat File Source Output].Columns[&quot;product_id&quot;]"
+                      name="&quot;product_id&quot;"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Ordenes\ItemsDeOrden.Outputs[Flat File Source Output].Columns[&quot;seller_id&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\ETL Ordenes\ItemsDeOrden.Outputs[Flat File Source Output].ExternalColumns[&quot;seller_id&quot;]"
+                      length="32"
+                      lineageId="Package\ETL Ordenes\ItemsDeOrden.Outputs[Flat File Source Output].Columns[&quot;seller_id&quot;]"
+                      name="&quot;seller_id&quot;"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Ordenes\ItemsDeOrden.Outputs[Flat File Source Output].Columns[&quot;price&quot;]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\ETL Ordenes\ItemsDeOrden.Outputs[Flat File Source Output].ExternalColumns[&quot;price&quot;]"
+                      lineageId="Package\ETL Ordenes\ItemsDeOrden.Outputs[Flat File Source Output].Columns[&quot;price&quot;]"
+                      name="&quot;price&quot;"
+                      precision="18"
+                      scale="2"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Ordenes\ItemsDeOrden.Outputs[Flat File Source Output].Columns[&quot;freight_value&quot;]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\ETL Ordenes\ItemsDeOrden.Outputs[Flat File Source Output].ExternalColumns[&quot;freight_value&quot;]"
+                      lineageId="Package\ETL Ordenes\ItemsDeOrden.Outputs[Flat File Source Output].Columns[&quot;freight_value&quot;]"
+                      name="&quot;freight_value&quot;"
+                      precision="18"
+                      scale="2"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ETL Ordenes\ItemsDeOrden.Outputs[Flat File Source Output].ExternalColumns[&quot;order_id&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="32"
+                      name="&quot;order_id&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Ordenes\ItemsDeOrden.Outputs[Flat File Source Output].ExternalColumns[&quot;order_item_id&quot;]"
+                      dataType="i4"
+                      name="&quot;order_item_id&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Ordenes\ItemsDeOrden.Outputs[Flat File Source Output].ExternalColumns[&quot;product_id&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="32"
+                      name="&quot;product_id&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Ordenes\ItemsDeOrden.Outputs[Flat File Source Output].ExternalColumns[&quot;seller_id&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="32"
+                      name="&quot;seller_id&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Ordenes\ItemsDeOrden.Outputs[Flat File Source Output].ExternalColumns[&quot;price&quot;]"
+                      dataType="numeric"
+                      name="&quot;price&quot;"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Ordenes\ItemsDeOrden.Outputs[Flat File Source Output].ExternalColumns[&quot;freight_value&quot;]"
+                      dataType="numeric"
+                      name="&quot;freight_value&quot;"
+                      precision="18"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\ETL Ordenes\ItemsDeOrden.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Ordenes\ItemsDeOrden.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\ETL Ordenes\ItemsDeOrden.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\ETL Ordenes\ItemsDeOrden.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL Ordenes\ItemsDeOrden.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL Ordenes\ItemsDeOrden.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL Ordenes\ItemsDeOrden.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL Ordenes\Ordenes"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="17418"
+              name="Ordenes"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL Ordenes\Ordenes.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ConexiónOrdenes]"
+                  connectionManagerRefId="Package.ConnectionManagers[ConexiónOrdenes]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Output].Columns[order_id]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Output].ExternalColumns[order_id]"
+                      length="32"
+                      lineageId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Output].Columns[order_id]"
+                      name="order_id"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Output].Columns[customer_id]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Output].ExternalColumns[customer_id]"
+                      length="32"
+                      lineageId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Output].Columns[customer_id]"
+                      name="customer_id"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Output].Columns[order_status]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Output].ExternalColumns[order_status]"
+                      length="20"
+                      lineageId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Output].Columns[order_status]"
+                      name="order_status"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Output].Columns[order_purchase_timestamp]"
+                      dataType="dbTimeStamp2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Output].ExternalColumns[order_purchase_timestamp]"
+                      lineageId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Output].Columns[order_purchase_timestamp]"
+                      name="order_purchase_timestamp"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Output].Columns[order_approved_at]"
+                      dataType="dbTime2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Output].ExternalColumns[order_approved_at]"
+                      lineageId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Output].Columns[order_approved_at]"
+                      name="order_approved_at"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Output].Columns[order_delivered_carrier_date]"
+                      dataType="dbTimeStamp2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Output].ExternalColumns[order_delivered_carrier_date]"
+                      lineageId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Output].Columns[order_delivered_carrier_date]"
+                      name="order_delivered_carrier_date"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Output].Columns[order_delivered_customer_date]"
+                      dataType="dbTimeStamp2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Output].ExternalColumns[order_delivered_customer_date]"
+                      lineageId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Output].Columns[order_delivered_customer_date]"
+                      name="order_delivered_customer_date"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Output].Columns[order_estimated_delivery_date]"
+                      dataType="dbTimeStamp2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Output].ExternalColumns[order_estimated_delivery_date]"
+                      lineageId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Output].Columns[order_estimated_delivery_date]"
+                      name="order_estimated_delivery_date"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Output].ExternalColumns[order_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="32"
+                      name="order_id" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Output].ExternalColumns[customer_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="32"
+                      name="customer_id" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Output].ExternalColumns[order_status]"
+                      codePage="65001"
+                      dataType="str"
+                      length="20"
+                      name="order_status" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Output].ExternalColumns[order_purchase_timestamp]"
+                      dataType="dbTimeStamp2"
+                      name="order_purchase_timestamp" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Output].ExternalColumns[order_approved_at]"
+                      dataType="dbTime2"
+                      name="order_approved_at" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Output].ExternalColumns[order_delivered_carrier_date]"
+                      dataType="dbTimeStamp2"
+                      name="order_delivered_carrier_date" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Output].ExternalColumns[order_delivered_customer_date]"
+                      dataType="dbTimeStamp2"
+                      name="order_delivered_customer_date" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Output].ExternalColumns[order_estimated_delivery_date]"
+                      dataType="dbTimeStamp2"
+                      name="order_estimated_delivery_date" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL Ordenes\Ordenes.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL Ordenes\PagosDeOrden"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="17418"
+              name="PagosDeOrden"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL Ordenes\PagosDeOrden.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ConexiónPago]"
+                  connectionManagerRefId="Package.ConnectionManagers[ConexiónPago]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\ETL Ordenes\PagosDeOrden.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Ordenes\PagosDeOrden.Outputs[Flat File Source Output].Columns[order_id]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\ETL Ordenes\PagosDeOrden.Outputs[Flat File Source Output].ExternalColumns[order_id]"
+                      length="32"
+                      lineageId="Package\ETL Ordenes\PagosDeOrden.Outputs[Flat File Source Output].Columns[order_id]"
+                      name="order_id"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Ordenes\PagosDeOrden.Outputs[Flat File Source Output].Columns[payment_sequential]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\ETL Ordenes\PagosDeOrden.Outputs[Flat File Source Output].ExternalColumns[payment_sequential]"
+                      lineageId="Package\ETL Ordenes\PagosDeOrden.Outputs[Flat File Source Output].Columns[payment_sequential]"
+                      name="payment_sequential"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Ordenes\PagosDeOrden.Outputs[Flat File Source Output].Columns[payment_type]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\ETL Ordenes\PagosDeOrden.Outputs[Flat File Source Output].ExternalColumns[payment_type]"
+                      length="20"
+                      lineageId="Package\ETL Ordenes\PagosDeOrden.Outputs[Flat File Source Output].Columns[payment_type]"
+                      name="payment_type"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Ordenes\PagosDeOrden.Outputs[Flat File Source Output].Columns[payment_installments]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\ETL Ordenes\PagosDeOrden.Outputs[Flat File Source Output].ExternalColumns[payment_installments]"
+                      lineageId="Package\ETL Ordenes\PagosDeOrden.Outputs[Flat File Source Output].Columns[payment_installments]"
+                      name="payment_installments"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Ordenes\PagosDeOrden.Outputs[Flat File Source Output].Columns[payment_value]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\ETL Ordenes\PagosDeOrden.Outputs[Flat File Source Output].ExternalColumns[payment_value]"
+                      lineageId="Package\ETL Ordenes\PagosDeOrden.Outputs[Flat File Source Output].Columns[payment_value]"
+                      name="payment_value"
+                      precision="18"
+                      scale="2"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ETL Ordenes\PagosDeOrden.Outputs[Flat File Source Output].ExternalColumns[order_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="32"
+                      name="order_id" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Ordenes\PagosDeOrden.Outputs[Flat File Source Output].ExternalColumns[payment_sequential]"
+                      dataType="i4"
+                      name="payment_sequential" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Ordenes\PagosDeOrden.Outputs[Flat File Source Output].ExternalColumns[payment_type]"
+                      codePage="65001"
+                      dataType="str"
+                      length="20"
+                      name="payment_type" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Ordenes\PagosDeOrden.Outputs[Flat File Source Output].ExternalColumns[payment_installments]"
+                      dataType="i4"
+                      name="payment_installments" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Ordenes\PagosDeOrden.Outputs[Flat File Source Output].ExternalColumns[payment_value]"
+                      dataType="numeric"
+                      name="payment_value"
+                      precision="18"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\ETL Ordenes\PagosDeOrden.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Ordenes\PagosDeOrden.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\ETL Ordenes\PagosDeOrden.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\ETL Ordenes\PagosDeOrden.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL Ordenes\PagosDeOrden.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL Ordenes\PagosDeOrden.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL Ordenes\PagosDeOrden.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -4363,6 +4381,14 @@ where [refTable].[product_category_name] = ?</property>
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restricción 3"
       DTS:To="Package\ETL Productos" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{6FD1000F-F6A8-4228-8A94-C8F3EBAF988B}"
+      DTS:From="Package\ETL Productos"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 4"
+      DTS:To="Package\ETL Ordenes" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
@@ -4388,6 +4414,10 @@ where [refTable].[product_category_name] = ?</property>
           Size="120,41.6"
           Id="Package\ETL Geo"
           TopLeft="299.444428083522,147.622221195676" />
+        <NodeLayout
+          Size="140,41.6"
+          Id="Package\ETL Ordenes"
+          TopLeft="659.999963939191,245.666665286554" />
         <NodeLayout
           Size="147.2,41.6"
           Id="Package\ETL Productos"
@@ -4520,6 +4550,40 @@ where [refTable].[product_category_name] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 4]"
+          TopLeft="805.324964041636,323.322220825034">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-5.32500010244462,-56.8555555384797"
+              Start="0,0"
+              End="2.17499989755538,-56.8555555384797">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.5,0"
+                    Point2="22.5,0"
+                    Point3="22.5,-4" />
+                  <mssgle:LineSegment
+                    End="22.5,-52.8555555384797" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.5,-52.8555555384797"
+                    Point2="22.5,-56.8555555384797"
+                    Point3="18.5,-56.8555555384797" />
+                  <mssgle:LineSegment
+                    End="2.17499989755538,-56.8555555384797" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -4590,31 +4654,15 @@ where [refTable].[product_category_name] = ?</property>
     design-time-name="Package\ETL Cliente">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\ETL Cliente\PagosDeOrden"
-          TopLeft="35.8333313754863,362.866666262878" />
-        <NodeLayout
-          Size="146.4,41.6"
-          Id="Package\ETL Cliente\ItemsDeOrden"
-          TopLeft="92.499994946023,240.466666407519" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="183.2,41.6"
           Id="Package\ETL Cliente\Destino Tabla Clientes"
           TopLeft="751.011863728425,616.392856681169" />
         <NodeLayout
-          Size="118.4,41.6"
-          Id="Package\ETL Cliente\Ordenes"
-          TopLeft="36.6666646632883,566.066666262878" />
-        <NodeLayout
           Size="138.4,41.6"
           Id="Package\ETL Cliente\DatosCliente"
           TopLeft="478.888862723555,288.599997993112" />
-        <NodeLayout
-          Size="172,41.6"
-          Id="Package\ETL Cliente\CalificaciónOrdenes"
-          TopLeft="35.8333313754863,464.466666262878" />
         <NodeLayout
           Size="112.8,41.6"
           Id="Package\ETL Cliente\Lookup"
@@ -4623,40 +4671,6 @@ where [refTable].[product_category_name] = ?</property>
           Size="161.6,41.6"
           Id="Package\ETL Cliente\Derived Column 1"
           TopLeft="409.999977598589,501.26666423791" />
-        <EdgeLayout
-          Id="Package\ETL Cliente.Paths[Derived Column Output]"
-          TopLeft="490.799977598589,542.86666423791">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="45.5999961753689,79.933332833118"
-              Start="0,0"
-              End="45.5999961753689,72.433332833118">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,35.966666416559" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,35.966666416559"
-                    Point2="0,39.966666416559"
-                    Point3="4,39.966666416559" />
-                  <mssgle:LineSegment
-                    End="41.5999961753689,39.966666416559" />
-                  <mssgle:CubicBezierSegment
-                    Point1="41.5999961753689,39.966666416559"
-                    Point2="45.5999961753689,39.966666416559"
-                    Point3="45.5999961753689,43.966666416559" />
-                  <mssgle:LineSegment
-                    End="45.5999961753689,72.433332833118" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\ETL Cliente.Paths[Lookup Match Output]"
           TopLeft="592.799973773958,640.396426876099">
@@ -4707,6 +4721,40 @@ where [refTable].[product_category_name] = ?</property>
                     Point3="-57.2888851249662,89.5333331223989" />
                   <mssgle:LineSegment
                     End="-57.2888851249662,163.566666244798" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL Cliente.Paths[Derived Column Output]"
+          TopLeft="490.799977598589,542.86666423791">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="45.5999961753689,79.933332833118"
+              Start="0,0"
+              End="45.5999961753689,72.433332833118">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.966666416559" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,35.966666416559"
+                    Point2="0,39.966666416559"
+                    Point3="4,39.966666416559" />
+                  <mssgle:LineSegment
+                    End="41.5999961753689,39.966666416559" />
+                  <mssgle:CubicBezierSegment
+                    Point1="41.5999961753689,39.966666416559"
+                    Point2="45.5999961753689,39.966666416559"
+                    Point3="45.5999961753689,43.966666416559" />
+                  <mssgle:LineSegment
+                    End="45.5999961753689,72.433332833118" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4881,6 +4929,30 @@ where [refTable].[product_category_name] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <TaskHost
+    design-time-name="Package\ETL Ordenes">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="118.4,41.6"
+          Id="Package\ETL Ordenes\Ordenes"
+          TopLeft="259.999997019768,60" />
+        <NodeLayout
+          Size="146.4,41.6"
+          Id="Package\ETL Ordenes\ItemsDeOrden"
+          TopLeft="905.899971476696,72.1333332489596" />
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\ETL Ordenes\PagosDeOrden"
+          TopLeft="849.233307906159,194.533333104319" />
+        <NodeLayout
+          Size="172,41.6"
+          Id="Package\ETL Ordenes\CalificaciónOrdenes"
+          TopLeft="849.233307906159,296.133333104319" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
     design-time-name="Package\ETL Productos">
     <LayoutInfo>
       <GraphLayout
@@ -5012,7 +5084,7 @@ where [refTable].[product_category_name] = ?</property>
     design-time-name="Package\ETL Vendedores">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="198.4,41.6"
           Id="Package\ETL Vendedores\DestinoTabla Vendedores"
@@ -5056,7 +5128,9 @@ where [refTable].[product_category_name] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5090,7 +5164,9 @@ where [refTable].[product_category_name] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
