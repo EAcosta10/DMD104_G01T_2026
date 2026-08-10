@@ -527,6 +527,9 @@ GO
 
 
 
+
+
+
    SELECT 'Customers' AS Tabla, COUNT(*) AS Total FROM dbo.Customers
 UNION ALL
 SELECT 'Geolocation', COUNT(*) FROM dbo.Geolocation

@@ -11,8 +11,8 @@
   DTS:LocaleID="17418"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="118"
-  DTS:VersionGUID="{38A29DBC-8088-473D-9205-3E3D3DA59318}">
+  DTS:VersionBuild="121"
+  DTS:VersionGUID="{CA9226DB-F09A-473C-B719-698980C1BCCA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -10457,26 +10457,26 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="50.6194402290029,23.9777773217577"
+              EndConnector="50.6194402290027,23.977777321757"
               Start="0,0"
-              End="50.6194402290029,16.4777773217577">
+              End="50.6194402290027,16.477777321757">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,10.2352277994435" />
+                    End="0,10.2352277994431" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,10.2352277994435"
-                    Point2="0,14.2352277994435"
-                    Point3="4,14.2352277994435" />
+                    Point1="0,10.2352277994431"
+                    Point2="0,14.2352277994431"
+                    Point3="4,14.2352277994431" />
                   <mssgle:LineSegment
-                    End="46.6194402290029,14.2352277994435" />
+                    End="46.6194402290027,14.2352277994431" />
                   <mssgle:CubicBezierSegment
-                    Point1="46.6194402290029,14.2352277994435"
-                    Point2="50.6194402290029,14.2352277994435"
-                    Point3="50.6194402290029,18.2352277994435" />
+                    Point1="46.6194402290027,14.2352277994431"
+                    Point2="50.6194402290027,14.2352277994431"
+                    Point3="50.6194402290027,18.2352277994431" />
                   <mssgle:LineSegment
-                    End="50.6194402290029,16.4777773217577" />
+                    End="50.6194402290027,16.477777321757" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10491,26 +10491,26 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="16.7472216568747,41.383332756277"
+              EndConnector="16.7472216568743,41.3833327562768"
               Start="0,0"
-              End="16.7472216568747,33.883332756277">
+              End="16.7472216568743,33.8833327562768">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.6916663781385" />
+                    End="0,16.6916663781384" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,16.6916663781385"
-                    Point2="0,20.6916663781385"
-                    Point3="4,20.6916663781385" />
+                    Point1="0,16.6916663781384"
+                    Point2="0,20.6916663781384"
+                    Point3="4,20.6916663781384" />
                   <mssgle:LineSegment
-                    End="12.7472216568747,20.6916663781385" />
+                    End="12.7472216568743,20.6916663781384" />
                   <mssgle:CubicBezierSegment
-                    Point1="12.7472216568747,20.6916663781385"
-                    Point2="16.7472216568747,20.6916663781385"
-                    Point3="16.7472216568747,24.6916663781385" />
+                    Point1="12.7472216568743,20.6916663781384"
+                    Point2="16.7472216568743,20.6916663781384"
+                    Point3="16.7472216568743,24.6916663781384" />
                   <mssgle:LineSegment
-                    End="16.7472216568747,33.883332756277" />
+                    End="16.7472216568743,33.8833327562768" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10525,26 +10525,26 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="30.2111100942453,25.8555550864784"
+              EndConnector="30.211110094246,25.855555086479"
               Start="0,0"
-              End="30.2111100942453,18.3555550864784">
+              End="30.211110094246,18.355555086479">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,8.92777754323922" />
+                    End="0,8.92777754323949" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,8.92777754323922"
-                    Point2="0,12.9277775432392"
-                    Point3="4,12.9277775432392" />
+                    Point1="0,8.92777754323949"
+                    Point2="0,12.9277775432395"
+                    Point3="4,12.9277775432395" />
                   <mssgle:LineSegment
-                    End="26.2111100942453,12.9277775432392" />
+                    End="26.211110094246,12.9277775432395" />
                   <mssgle:CubicBezierSegment
-                    Point1="26.2111100942453,12.9277775432392"
-                    Point2="30.2111100942453,12.9277775432392"
-                    Point3="30.2111100942453,16.9277775432392" />
+                    Point1="26.211110094246,12.9277775432395"
+                    Point2="30.211110094246,12.9277775432395"
+                    Point3="30.211110094246,16.9277775432395" />
                   <mssgle:LineSegment
-                    End="30.2111100942453,18.3555550864784" />
+                    End="30.211110094246,18.355555086479" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11020,7 +11020,7 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -11030,7 +11030,7 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -11038,17 +11038,17 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\ETL Cargar Item\Validación_existe_vendedor">
+    design-time-name="Package\ETL Cargar Item\Validación_existe_orden">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[Sellers]</Value>
+          type="q3:string">[dbo].[Orders]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -11074,22 +11074,22 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\ETL Cargar Item\Validación_existe_orden">
+    design-time-name="Package\ETL Cargar Item\Validación_existe_vendedor">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[Orders]</Value>
+          type="q3:string">[dbo].[Sellers]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -11285,7 +11285,7 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -11557,7 +11557,7 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -11567,7 +11567,7 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -11587,6 +11587,10 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
           Size="219.2,41.6"
           Id="Package\ETL Categorias\CategoriaDeProductoEnIngles"
           TopLeft="60.9999999850988,60" />
+        <NodeLayout
+          Size="172.8,41.6"
+          Id="Package\ETL Categorias\Error Leer Categoria"
+          TopLeft="403.999993979931,79.9999988079071" />
         <EdgeLayout
           Id="Package\ETL Categorias.Paths[Flat File Source Output]"
           TopLeft="170.599999985099,101.6">
@@ -11621,10 +11625,6 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="172.8,41.6"
-          Id="Package\ETL Categorias\Error Leer Categoria"
-          TopLeft="403.999993979931,79.9999988079071" />
         <EdgeLayout
           Id="Package\ETL Categorias.Paths[Flat File Source Error Output]"
           TopLeft="280.199999985099,80.8">
@@ -11685,56 +11685,66 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
         <NodeLayout
           Size="183.2,41.6"
           Id="Package\ETL Cliente\Destino Tabla Clientes"
-          TopLeft="745.456308255654,569.72619070989" />
+          TopLeft="459.302466365832,394.341575692073" />
         <NodeLayout
           Size="150.4,41.6"
           Id="Package\ETL Cliente\validar zip code"
-          TopLeft="479.999973773958,622.799997071028" />
+          TopLeft="193.846131884136,447.415382053211" />
+        <NodeLayout
+          Size="165.6,41.6"
+          Id="Package\ETL Cliente\Error al leer cliente"
+          TopLeft="542.73503464766,243.059827588817" />
+        <NodeLayout
+          Size="186.4,41.6"
+          Id="Package\ETL Cliente\Error al exportar cliente"
+          TopLeft="680.170930035599,333.042733052093" />
         <NodeLayout
           Size="162.4,41.6"
           Id="Package\ETL Cliente\Normalizar ciudad"
-          TopLeft="409.999977598589,501.26666423791" />
+          TopLeft="123.846135708767,325.882049220093" />
         <NodeLayout
           Size="138.4,41.6"
           Id="Package\ETL Cliente\DatosCliente"
-          TopLeft="478.888862723555,288.599997993112" />
+          TopLeft="192.735020833733,113.215382975294" />
         <EdgeLayout
-          Id="Package\ETL Cliente.Paths[Derived Column Output]"
-          TopLeft="491.199977598589,542.86666423791">
+          Id="Package\ETL Cliente.Paths[OLE DB Destination Error Output]"
+          TopLeft="642.502466365832,415.141575692073">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="63.9999961753691,79.933332833118"
+              EndConnector="37.6684636697671,-61.2988426399795"
               Start="0,0"
-              End="63.9999961753691,72.433332833118">
+              End="30.1684636697671,-61.2988426399795">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,35.966666416559" />
+                    End="14.8342318348836,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,35.966666416559"
-                    Point2="0,39.966666416559"
-                    Point3="4,39.966666416559" />
+                    Point1="14.8342318348836,0"
+                    Point2="18.8342318348836,0"
+                    Point3="18.8342318348836,-4" />
                   <mssgle:LineSegment
-                    End="59.9999961753691,39.966666416559" />
+                    End="18.8342318348836,-57.2988426399795" />
                   <mssgle:CubicBezierSegment
-                    Point1="59.9999961753691,39.966666416559"
-                    Point2="63.9999961753691,39.966666416559"
-                    Point3="63.9999961753691,43.966666416559" />
+                    Point1="18.8342318348836,-57.2988426399795"
+                    Point2="18.8342318348836,-61.2988426399795"
+                    Point3="22.8342318348836,-61.2988426399795" />
                   <mssgle:LineSegment
-                    End="63.9999961753691,72.433332833118" />
+                    End="30.1684636697671,-61.2988426399795" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-54.3746744151164,1,146.4178125,11.43359375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\ETL Cliente.Paths[Lookup Match Output]"
-          TopLeft="630.399973773958,643.599997071028">
+          TopLeft="344.246131884136,468.215382053211">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -11764,13 +11774,13 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="9.33678052209783,1,96.3827734375,11.609375"
+              BoundingBox="9.33678052209778,1,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\ETL Cliente.Paths[Flat File Source Output]"
-          TopLeft="526.355529390222,330.199997993112">
+          TopLeft="240.2016875004,154.815382975294">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -11802,13 +11812,9 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="165.6,41.6"
-          Id="Package\ETL Cliente\Error al leer cliente"
-          TopLeft="828.888876537482,418.444442606635" />
         <EdgeLayout
           Id="Package\ETL Cliente.Paths[Flat File Source Error Output]"
-          TopLeft="569.822196056888,330.199997993112">
+          TopLeft="283.668354167066,154.815382975294">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -11838,48 +11844,42 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="107.306953521547,40.9028826084731,127.2527734375,11.609375"
+              BoundingBox="107.306953521546,40.9028826084731,127.2527734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="186.4,41.6"
-          Id="Package\ETL Cliente\Error al exportar cliente"
-          TopLeft="1045.55553997556,586.888885362281" />
         <EdgeLayout
-          Id="Package\ETL Cliente.Paths[OLE DB Destination Error Output]"
-          TopLeft="928.656308255654,590.52619070989">
+          Id="Package\ETL Cliente.Paths[Derived Column Output]"
+          TopLeft="205.046135708767,367.482049220093">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="116.89923171991,17.162694652391"
+              EndConnector="63.9999961753691,79.933332833118"
               Start="0,0"
-              End="109.39923171991,17.162694652391">
+              End="63.9999961753691,72.433332833118">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="54.449615859955,0" />
+                    End="0,35.966666416559" />
                   <mssgle:CubicBezierSegment
-                    Point1="54.449615859955,0"
-                    Point2="58.449615859955,0"
-                    Point3="58.449615859955,4" />
+                    Point1="0,35.966666416559"
+                    Point2="0,39.966666416559"
+                    Point3="4,39.966666416559" />
                   <mssgle:LineSegment
-                    End="58.449615859955,13.162694652391" />
+                    End="59.9999961753691,39.966666416559" />
                   <mssgle:CubicBezierSegment
-                    Point1="58.449615859955,13.162694652391"
-                    Point2="58.449615859955,17.162694652391"
-                    Point3="62.449615859955,17.162694652391" />
+                    Point1="59.9999961753691,39.966666416559"
+                    Point2="63.9999961753691,39.966666416559"
+                    Point3="63.9999961753691,43.966666416559" />
                   <mssgle:LineSegment
-                    End="109.39923171991,17.162694652391" />
+                    End="63.9999961753691,72.433332833118" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-14.759290390045,-17.43359375,146.4178125,11.43359375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -11931,13 +11931,49 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
           Id="Package\ETL Geo\DestinoTabla Geolocalización"
           TopLeft="267.272724184123,287.067174399528" />
         <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\ETL Geo\DatosGeolocalización"
+          TopLeft="130.119946350122,63.4666666425599" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\ETL Geo\Error al leer geo"
+          TopLeft="428.701292313152,135.714283691985" />
+        <NodeLayout
           Size="204,41.6"
           Id="Package\ETL Geo\Normalizar ciudad y estado"
           TopLeft="119.286613608696,159.466665557755" />
         <NodeLayout
-          Size="179.2,41.6"
-          Id="Package\ETL Geo\DatosGeolocalización"
-          TopLeft="130.119946350122,63.4666666425599" />
+          Size="196,41.6"
+          Id="Package\ETL Geo\Error al meter a base geo"
+          TopLeft="775.454533899372,289.818178648298" />
+        <NodeLayout
+          Size="331.2,41.6"
+          Id="Package\ETL Geo\Ordena los datos de geo a que quede uno por zip code"
+          TopLeft="29.0909086574206,343.454544357278" />
+        <EdgeLayout
+          Id="Package\ETL Geo.Paths[OLE DB Destination Error Output]"
+          TopLeft="483.272724184123,309.642676523913">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="292.181809715249,0"
+              Start="0,0"
+              End="284.681809715249,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="284.681809715249,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="69.1319986076247,5,146.4178125,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\ETL Geo.Paths[Flat File Source Output]"
           TopLeft="191.186613016788,105.06666664256">
@@ -11972,10 +12008,6 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\ETL Geo\Error al leer geo"
-          TopLeft="428.701292313152,135.714283691985" />
         <EdgeLayout
           Id="Package\ETL Geo.Paths[Flat File Source Error Output]"
           TopLeft="248.253279683455,105.06666664256">
@@ -12012,38 +12044,6 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="196,41.6"
-          Id="Package\ETL Geo\Error al meter a base geo"
-          TopLeft="775.454533899372,289.818178648298" />
-        <EdgeLayout
-          Id="Package\ETL Geo.Paths[OLE DB Destination Error Output]"
-          TopLeft="483.272724184123,309.642676523913">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="292.181809715249,0"
-              Start="0,0"
-              End="284.681809715249,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="284.681809715249,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="69.1319986076247,5,146.4178125,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="331.2,41.6"
-          Id="Package\ETL Geo\Ordena los datos de geo a que quede uno por zip code"
-          TopLeft="29.0909086574206,343.454544357278" />
         <EdgeLayout
           Id="Package\ETL Geo.Paths[Derived Column Output]"
           TopLeft="221.286613608696,201.066665557755">
@@ -12327,7 +12327,7 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -12536,7 +12536,7 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -12546,7 +12546,7 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -12572,87 +12572,63 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="198.4,41.6"
-          Id="Package\ETL Vendedores\DestinoTabla Vendedores"
-          TopLeft="391.999994158745,295.799995604157" />
+          Size="152,41.6"
+          Id="Package\ETL Vendedores\Validar zip code"
+          TopLeft="560.999991640449,196.399997407198" />
+        <NodeLayout
+          Size="178.4,41.6"
+          Id="Package\ETL Vendedores\Error al leer vendedor"
+          TopLeft="558.999991670251,101.79999897182" />
         <NodeLayout
           Size="164.8,41.6"
           Id="Package\ETL Vendedores\Normalizar Ciudad"
           TopLeft="186.999997213483,163.99999755621" />
         <NodeLayout
+          Size="188.8,41.6"
+          Id="Package\ETL Vendedores\Error exportar vendedor"
+          TopLeft="825.999987691641,305.799997124075" />
+        <NodeLayout
           Size="134.4,41.6"
           Id="Package\ETL Vendedores\Vendedores"
           TopLeft="219.999997615814,60" />
-        <EdgeLayout
-          Id="Package\ETL Vendedores.Paths[Flat File Source Output]"
-          TopLeft="287.199997615814,101.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-17.800000402331,62.39999755621"
-              Start="0,0"
-              End="-17.800000402331,54.89999755621">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.199998778105" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,27.199998778105"
-                    Point2="0,31.199998778105"
-                    Point3="-4,31.199998778105" />
-                  <mssgle:LineSegment
-                    End="-13.800000402331,31.199998778105" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-13.800000402331,31.199998778105"
-                    Point2="-17.800000402331,31.199998778105"
-                    Point3="-17.800000402331,35.199998778105" />
-                  <mssgle:LineSegment
-                    End="-17.800000402331,54.89999755621" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
-          Size="152,41.6"
-          Id="Package\ETL Vendedores\Validar zip code"
-          TopLeft="560.999991640449,196.399997407198" />
+          Size="198.4,41.6"
+          Id="Package\ETL Vendedores\DestinoTabla Vendedores"
+          TopLeft="391.999994158745,295.799995604157" />
         <EdgeLayout
-          Id="Package\ETL Vendedores.Paths[Derived Column Output]"
-          TopLeft="351.799997213483,184.79999755621">
+          Id="Package\ETL Vendedores.Paths[OLE DB Destination Error Output]"
+          TopLeft="590.399994158745,316.599995604157">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="209.199994426966,32.399999850988"
+              EndConnector="235.599993532896,10.0000015199183"
               Start="0,0"
-              End="201.699994426966,32.399999850988">
+              End="228.099993532896,10.0000015199183">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="100.599997213483,0" />
+                    End="113.799996766448,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="100.599997213483,0"
-                    Point2="104.599997213483,0"
-                    Point3="104.599997213483,4" />
+                    Point1="113.799996766448,0"
+                    Point2="117.799996766448,0"
+                    Point3="117.799996766448,4" />
                   <mssgle:LineSegment
-                    End="104.599997213483,28.399999850988" />
+                    End="117.799996766448,6.00000151991833" />
                   <mssgle:CubicBezierSegment
-                    Point1="104.599997213483,28.399999850988"
-                    Point2="104.599997213483,32.399999850988"
-                    Point3="108.599997213483,32.399999850988" />
+                    Point1="117.799996766448,6.00000151991833"
+                    Point2="117.799996766448,10.0000015199183"
+                    Point3="121.799996766448,10.0000015199183" />
                   <mssgle:LineSegment
-                    End="201.699994426966,32.399999850988" />
+                    End="228.099993532896,10.0000015199183" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="44.5910905164479,-17.43359375,146.4178125,11.43359375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12691,14 +12667,40 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="178.4,41.6"
-          Id="Package\ETL Vendedores\Error al leer vendedor"
-          TopLeft="558.999991670251,101.79999897182" />
-        <NodeLayout
-          Size="188.8,41.6"
-          Id="Package\ETL Vendedores\Error exportar vendedor"
-          TopLeft="825.999987691641,305.799997124075" />
+        <EdgeLayout
+          Id="Package\ETL Vendedores.Paths[Flat File Source Output]"
+          TopLeft="287.199997615814,101.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-17.800000402331,62.39999755621"
+              Start="0,0"
+              End="-17.800000402331,54.89999755621">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.199998778105" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.199998778105"
+                    Point2="0,31.199998778105"
+                    Point3="-4,31.199998778105" />
+                  <mssgle:LineSegment
+                    End="-13.800000402331,31.199998778105" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-13.800000402331,31.199998778105"
+                    Point2="-17.800000402331,31.199998778105"
+                    Point3="-17.800000402331,35.199998778105" />
+                  <mssgle:LineSegment
+                    End="-17.800000402331,54.89999755621" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\ETL Vendedores.Paths[Flat File Source Error Output]"
           TopLeft="354.399997615814,80.8">
@@ -12736,44 +12738,65 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\ETL Vendedores.Paths[OLE DB Destination Error Output]"
-          TopLeft="590.399994158745,316.599995604157">
+          Id="Package\ETL Vendedores.Paths[Derived Column Output]"
+          TopLeft="351.799997213483,184.79999755621">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="235.599993532896,10.0000015199183"
+              EndConnector="209.199994426966,32.399999850988"
               Start="0,0"
-              End="228.099993532896,10.0000015199183">
+              End="201.699994426966,32.399999850988">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="113.799996766448,0" />
+                    End="100.599997213483,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="113.799996766448,0"
-                    Point2="117.799996766448,0"
-                    Point3="117.799996766448,4" />
+                    Point1="100.599997213483,0"
+                    Point2="104.599997213483,0"
+                    Point3="104.599997213483,4" />
                   <mssgle:LineSegment
-                    End="117.799996766448,6.00000151991833" />
+                    End="104.599997213483,28.399999850988" />
                   <mssgle:CubicBezierSegment
-                    Point1="117.799996766448,6.00000151991833"
-                    Point2="117.799996766448,10.0000015199183"
-                    Point3="121.799996766448,10.0000015199183" />
+                    Point1="104.599997213483,28.399999850988"
+                    Point2="104.599997213483,32.399999850988"
+                    Point3="108.599997213483,32.399999850988" />
                   <mssgle:LineSegment
-                    End="228.099993532896,10.0000015199183" />
+                    End="201.699994426966,32.399999850988" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="44.5910905164479,-17.43359375,146.4178125,11.43359375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL Vendedores\Validar zip code">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Geolocation]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\ETL Vendedores\DestinoTabla Vendedores">
     <Properties>
@@ -12784,29 +12807,6 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\ETL Vendedores\Validar zip code">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Geolocation]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
