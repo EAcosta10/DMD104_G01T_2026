@@ -5,8 +5,8 @@
    mediante un proceso ETL a partir de los archivos CSV de Olist. 
    ============================================================ */
 
-   use master
-   drop database OlistDW
+   --use master
+   --drop database OlistDW
 /* ============================================================
    1. CREAR BASE DE DATOS
    ============================================================ */
