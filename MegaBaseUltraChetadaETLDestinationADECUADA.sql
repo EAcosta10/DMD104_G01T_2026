@@ -5,7 +5,8 @@
    mediante un proceso ETL a partir de los archivos CSV de Olist. 
    ============================================================ */
 
-
+   use master
+   drop database OlistDW
 /* ============================================================
    1. CREAR BASE DE DATOS
    ============================================================ */
@@ -491,7 +492,57 @@ ADD CONSTRAINT FK_Products_Category
     REFERENCES dbo.ProductCategoryTranslation(product_category_name);
 GO
 
+/* ============================================================
+   AJUSTE EN LA TABLA GEOLOCATION 
+   ============================================================ */
+
+-- se define código postal como clave primaria en Geolocation:
+ALTER TABLE dbo.Geolocation
+ADD CONSTRAINT PK_Geolocation 
+    PRIMARY KEY (geolocation_zip_code_prefix);
+GO
+
+
+/* ============================================================
+   12. LLAVES FORÁNEAS HACIA GEOLOCATION
+   ============================================================ */
+
+-- 1. Relación Customers -> Geolocation
+ALTER TABLE dbo.Customers
+ADD CONSTRAINT FK_Customers_Geolocation
+    FOREIGN KEY (customer_zip_code_prefix)
+    REFERENCES dbo.Geolocation(geolocation_zip_code_prefix);
+GO
+
+-- 2. Relación Sellers -> Geolocation
+ALTER TABLE dbo.Sellers
+ADD CONSTRAINT FK_Sellers_Geolocation
+    FOREIGN KEY (seller_zip_code_prefix)
+    REFERENCES dbo.Geolocation(geolocation_zip_code_prefix);
+GO
 
 /* ============================================================
    FIN DE LA BASE DE DATOS DESTINO
    ============================================================ */
+
+
+
+   SELECT 'Customers' AS Tabla, COUNT(*) AS Total FROM dbo.Customers
+UNION ALL
+SELECT 'Geolocation', COUNT(*) FROM dbo.Geolocation
+UNION ALL
+SELECT 'Orders', COUNT(*) FROM dbo.Orders
+UNION ALL
+SELECT 'OrderItems', COUNT(*) FROM dbo.OrderItems
+UNION ALL
+SELECT 'OrderPayments', COUNT(*) FROM dbo.OrderPayments
+UNION ALL
+SELECT 'OrderReviews', COUNT(*) FROM dbo.OrderReviews
+UNION ALL
+SELECT 'Products', COUNT(*) FROM dbo.Products
+UNION ALL
+SELECT 'ProductCategoryTranslation', COUNT(*) FROM dbo.ProductCategoryTranslation
+UNION ALL
+SELECT 'Sellers', COUNT(*) FROM dbo.Sellers;
+
+
