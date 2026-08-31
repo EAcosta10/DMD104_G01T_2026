@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37614.0 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "ProyectoMultidimensional_BrazilianE-Commerce", "ProyectoMultidimensional_BrazilianE-Commerce.dwproj", "{E42A6BBD-97C6-940F-F5DC-ECA1C2204F4B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E42A6BBD-97C6-940F-F5DC-ECA1C2204F4B}.Development|Default.ActiveCfg = Development
+		{E42A6BBD-97C6-940F-F5DC-ECA1C2204F4B}.Development|Default.Build.0 = Development
+		{E42A6BBD-97C6-940F-F5DC-ECA1C2204F4B}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EEE4652A-1630-4F5E-9AE3-02AAFA9697F0}
+	EndGlobalSection
+EndGlobal
