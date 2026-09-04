@@ -6,6 +6,36 @@
     <Name>ProyectoMultidimensional_BrazilianE-Commerce.database</Name>
     <FullPath>ProyectoMultidimensional_BrazilianE-Commerce.database</FullPath>
   </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>Olist DW.cube</Name>
+      <FullPath>Olist DW.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Olist DW.partitions</Name>
+          <FullPath>Olist DW.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
+  <Dimensions>
+    <ProjectItem>
+      <Name>Dim Vendedores.dim</Name>
+      <FullPath>Dim Vendedores.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Productos.dim</Name>
+      <FullPath>Dim Productos.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Clientes.dim</Name>
+      <FullPath>Dim Clientes.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Tiempo.dim</Name>
+      <FullPath>Dim Tiempo.dim</FullPath>
+    </ProjectItem>
+  </Dimensions>
   <DataSources>
     <ProjectItem>
       <Name>Olist DW.ds</Name>
