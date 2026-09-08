@@ -35,6 +35,10 @@
       <Name>Dim Tiempo.dim</Name>
       <FullPath>Dim Tiempo.dim</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Geo.dim</Name>
+      <FullPath>Dim Geo.dim</FullPath>
+    </ProjectItem>
   </Dimensions>
   <DataSources>
     <ProjectItem>
