@@ -89,14 +89,14 @@
       <operator activated="true" class="multiply" compatibility="12.1.001" expanded="true" height="187" name="Multiply" width="90" x="447" y="187">
         <description align="center" color="transparent" colored="false" width="126">Multiplicador de entrada que permite copiar el flujo</description>
       </operator>
-      <operator activated="true" class="blending:select_attributes" compatibility="12.1.001" expanded="true" height="82" name="Select Attributes (5)" width="90" x="581" y="1258">
+      <operator activated="true" class="blending:select_attributes" compatibility="12.1.001" expanded="true" height="82" name="Select Attributes (5)" width="90" x="581" y="1309">
         <parameter key="type" value="include attributes"/>
         <parameter key="attribute_filter_type" value="a subset"/>
         <parameter key="select_attribute" value=""/>
         <parameter key="select_subset" value="Precio_Producto␞Valor_Flete␞Peso_g"/>
         <parameter key="also_apply_to_special_attributes_(id,_label..)" value="false"/>
       </operator>
-      <operator activated="true" class="replace_missing_values" compatibility="12.1.001" expanded="true" height="103" name="Replace Missing Values (3)" width="90" x="715" y="1258">
+      <operator activated="true" class="replace_missing_values" compatibility="12.1.001" expanded="true" height="103" name="Replace Missing Values (3)" width="90" x="715" y="1309">
         <parameter key="return_preprocessing_model" value="false"/>
         <parameter key="attribute_filter_type" value="all"/>
         <parameter key="attribute" value=""/>
@@ -113,7 +113,7 @@
         <parameter key="default" value="average"/>
         <list key="columns"/>
       </operator>
-      <operator activated="true" class="concurrency:k_means" compatibility="12.1.001" expanded="true" height="82" name="K-Means Clustering (k=4) Evaluación de Vendedores" width="90" x="983" y="1360">
+      <operator activated="true" class="concurrency:k_means" compatibility="12.1.001" expanded="true" height="82" name="K-Means Clustering (k=4) Evaluación de Vendedores" width="90" x="849" y="1309">
         <parameter key="add_cluster_attribute" value="true"/>
         <parameter key="add_as_label" value="false"/>
         <parameter key="remove_unlabeled" value="false"/>
@@ -169,7 +169,7 @@
         <parameter key="default" value="average"/>
         <list key="columns"/>
       </operator>
-      <operator activated="true" class="concurrency:k_means" compatibility="12.1.001" expanded="true" height="82" name="K-Means Clustering (k=3) Hábitos y Lealtad del Cliente" width="90" x="983" y="1156">
+      <operator activated="true" class="concurrency:k_means" compatibility="12.1.001" expanded="true" height="82" name="K-Means Clustering (k=3) Hábitos y Lealtad del Cliente" width="90" x="849" y="1105">
         <parameter key="add_cluster_attribute" value="true"/>
         <parameter key="add_as_label" value="false"/>
         <parameter key="remove_unlabeled" value="false"/>
@@ -201,14 +201,14 @@
         <parameter key="normalize" value="false"/>
         <parameter key="maximize" value="false"/>
       </operator>
-      <operator activated="true" class="blending:select_attributes" compatibility="12.1.001" expanded="true" height="82" name="Select Attributes (3)" width="90" x="581" y="952">
+      <operator activated="true" class="blending:select_attributes" compatibility="12.1.001" expanded="true" height="82" name="Select Attributes (3)" width="90" x="581" y="901">
         <parameter key="type" value="include attributes"/>
         <parameter key="attribute_filter_type" value="a subset"/>
         <parameter key="select_attribute" value=""/>
         <parameter key="select_subset" value="Categoria␞Ciudad_Cliente␞Estado_Cliente␞Tipo_Pago"/>
         <parameter key="also_apply_to_special_attributes_(id,_label..)" value="false"/>
       </operator>
-      <operator activated="true" class="nominal_to_binominal" compatibility="12.1.001" expanded="true" height="103" name="Nominal to Binominal" width="90" x="715" y="952">
+      <operator activated="true" class="nominal_to_binominal" compatibility="12.1.001" expanded="true" height="103" name="Nominal to Binominal" width="90" x="715" y="901">
         <parameter key="return_preprocessing_model" value="false"/>
         <parameter key="attribute_filter_type" value="all"/>
         <parameter key="attribute" value=""/>
@@ -225,7 +225,7 @@
         <parameter key="transform_binominal" value="false"/>
         <parameter key="use_underscore_in_name" value="false"/>
       </operator>
-      <operator activated="true" class="concurrency:fp_growth" compatibility="12.1.001" expanded="true" height="82" name="FP-Growth" width="90" x="849" y="952">
+      <operator activated="true" class="concurrency:fp_growth" compatibility="12.1.001" expanded="true" height="82" name="FP-Growth" width="90" x="849" y="901">
         <parameter key="input_format" value="items in dummy coded columns"/>
         <parameter key="item_separators" value="|"/>
         <parameter key="use_quotes" value="false"/>
@@ -244,7 +244,7 @@
         <parameter key="requirement_decrease_factor" value="0.9"/>
         <enumeration key="must_contain_list"/>
       </operator>
-      <operator activated="true" class="create_association_rules" compatibility="12.1.001" expanded="true" height="82" name="Reglas de Asociación (FP-Growth) Hábitos y Lealtad del Cliente" width="90" x="983" y="901">
+      <operator activated="true" class="create_association_rules" compatibility="12.1.001" expanded="true" height="82" name="Reglas de Asociación (FP-Growth) Hábitos y Lealtad del Cliente" width="90" x="1184" y="850">
         <parameter key="criterion" value="confidence"/>
         <parameter key="min_confidence" value="0.7"/>
         <parameter key="min_criterion_value" value="0.8"/>
@@ -252,7 +252,7 @@
         <parameter key="laplace_k" value="1.0"/>
         <description align="center" color="orange" colored="true" width="126">Reglas de Asociaci&amp;#243;n&lt;br&gt;Enfocado en la detecci&amp;#243;n de patrones de compra</description>
       </operator>
-      <operator activated="true" class="blending:select_attributes" compatibility="12.1.001" expanded="true" height="82" name="Select Attributes (2)" width="90" x="581" y="799">
+      <operator activated="true" class="blending:select_attributes" compatibility="12.1.001" expanded="true" height="82" name="Select Attributes (2)" width="90" x="581" y="748">
         <parameter key="type" value="include attributes"/>
         <parameter key="attribute_filter_type" value="type(s) of values"/>
         <parameter key="select_attribute" value=""/>
@@ -260,7 +260,7 @@
         <parameter key="type_of_value" value="real␞integer"/>
         <parameter key="also_apply_to_special_attributes_(id,_label..)" value="false"/>
       </operator>
-      <operator activated="true" class="replace_missing_values" compatibility="12.1.001" expanded="true" height="103" name="Replace Missing Values" width="90" x="715" y="799">
+      <operator activated="true" class="replace_missing_values" compatibility="12.1.001" expanded="true" height="103" name="Replace Missing Values" width="90" x="715" y="748">
         <parameter key="return_preprocessing_model" value="false"/>
         <parameter key="attribute_filter_type" value="all"/>
         <parameter key="attribute" value=""/>
@@ -277,7 +277,7 @@
         <parameter key="default" value="average"/>
         <list key="columns"/>
       </operator>
-      <operator activated="true" class="concurrency:k_means" compatibility="12.1.001" expanded="true" height="82" name="K-Means Clustering (k=5) Perfilamiento Logístico Global" width="90" x="983" y="646">
+      <operator activated="true" class="concurrency:k_means" compatibility="12.1.001" expanded="true" height="82" name="K-Means Clustering (k=5) Perfilamiento Logístico Global" width="90" x="916" y="646">
         <parameter key="add_cluster_attribute" value="true"/>
         <parameter key="add_as_label" value="false"/>
         <parameter key="remove_unlabeled" value="false"/>
@@ -303,7 +303,7 @@
         <parameter key="local_random_seed" value="1992"/>
         <description align="center" color="orange" colored="true" width="126">K-Means&lt;br&gt;Enfocado en perfilar en 5 grupos las similitudes logisticas de los envios</description>
       </operator>
-      <operator activated="true" class="cluster_distance_performance" compatibility="12.1.001" expanded="true" height="103" name="K-Means Clustering (k=5) Perfilamiento Logístico Global (2)" width="90" x="1184" y="646">
+      <operator activated="true" class="cluster_distance_performance" compatibility="12.1.001" expanded="true" height="103" name="K-Means Clustering (k=5) Perfilamiento Logístico Global (2)" width="90" x="1184" y="595">
         <parameter key="main_criterion" value="Avg. within centroid distance"/>
         <parameter key="main_criterion_only" value="false"/>
         <parameter key="normalize" value="false"/>
@@ -382,7 +382,7 @@
       <operator activated="true" class="apply_model" compatibility="12.1.001" expanded="true" height="82" name="Apply Model Regresión Logística Retrasos Logísticos" width="90" x="849" y="391">
         <list key="application_parameters"/>
       </operator>
-      <operator activated="true" class="performance_binominal_classification" compatibility="12.1.001" expanded="true" height="82" name="Performance Regresión Logística Retrasos Logísticos" width="90" x="983" y="289">
+      <operator activated="true" class="performance_binominal_classification" compatibility="12.1.001" expanded="true" height="82" name="Performance Regresión Logística Retrasos Logísticos" width="90" x="1184" y="340">
         <parameter key="manually_set_positive_class" value="false"/>
         <parameter key="main_criterion" value="first"/>
         <parameter key="accuracy" value="true"/>
