@@ -75,14 +75,18 @@
       <operator activated="true" class="blending:set_role" compatibility="12.1.001" expanded="true" height="82" name="Set Role" width="90" x="179" y="187">
         <list key="set_roles">
           <parameter key="Es_Entrega_Tardia" value="label"/>
+          <parameter key="order_id" value="id"/>
+          <parameter key="customer_id" value="id"/>
+          <parameter key="product_id" value="id"/>
+          <parameter key="seller_id" value="id"/>
         </list>
-        <description align="center" color="transparent" colored="false" width="126">Configuraci&amp;#243;n del rol de Es entrega tardia como etiqueta</description>
+        <description align="center" color="transparent" colored="false" width="124">Configuraci&amp;#243;n del rol de Es entrega tardia como etiqueta &amp;amp; de id cliente y id orden como id</description>
       </operator>
       <operator activated="true" class="blending:select_attributes" compatibility="12.1.001" expanded="true" height="82" name="Select Attributes" width="90" x="313" y="187">
         <parameter key="type" value="include attributes"/>
         <parameter key="attribute_filter_type" value="a subset"/>
         <parameter key="select_attribute" value=""/>
-        <parameter key="select_subset" value="␞Alto_cm␞Ancho_cm␞Anio␞Categoria␞Ciudad_Cliente␞Ciudad_Vendedor␞Cuotas␞Dia␞Es_Entrega_Tardia␞Estado_Cliente␞Estado_Vendedor␞Largo_cm␞Mes␞Peso_g␞Precio_Producto␞Tipo_Pago␞Valor_Flete␞Valor_Pago"/>
+        <parameter key="select_subset" value="␞Alto_cm␞Ancho_cm␞Anio␞Categoria␞Ciudad_Cliente␞Ciudad_Vendedor␞Cuotas␞Dia␞Es_Entrega_Tardia␞Estado_Cliente␞Estado_Vendedor␞Largo_cm␞Mes␞Peso_g␞Precio_Producto␞Tipo_Pago␞Valor_Flete␞Valor_Pago␞order_id␞customer_id␞seller_id"/>
         <parameter key="also_apply_to_special_attributes_(id,_label..)" value="false"/>
         <description align="center" color="transparent" colored="false" width="126">Filtro de atributos relevantes y eliminaci&amp;#243;n de atributos pos-entrega</description>
       </operator>
@@ -139,11 +143,21 @@
         <parameter key="local_random_seed" value="1992"/>
         <description align="center" color="orange" colored="true" width="126">K-Means&lt;br&gt;Segmentaci&amp;#243;n de vendedores basandose en datos logisticos</description>
       </operator>
-      <operator activated="true" class="cluster_distance_performance" compatibility="12.1.001" expanded="true" height="103" name="Performance K-Means Clustering (k=4) Evaluación de Vendedores" width="90" x="1184" y="1258">
+      <operator activated="true" class="cluster_distance_performance" compatibility="12.1.001" expanded="true" height="103" name="Performance K-Means Clustering (k=4) Evaluación de Vendedores" width="90" x="1184" y="1309">
         <parameter key="main_criterion" value="Avg. within centroid distance"/>
         <parameter key="main_criterion_only" value="false"/>
         <parameter key="normalize" value="false"/>
         <parameter key="maximize" value="false"/>
+      </operator>
+      <operator activated="true" class="write_csv" compatibility="12.1.001" expanded="true" height="82" name="Write CSV (6)" width="90" x="1318" y="1411">
+        <parameter key="csv_file" value="C:/Users/DEAC/Documents/UDB/CICLO IV 26/DMD/DMD104_G01T_2026/CSV_DatosMineriaSalida/K-Means Segmentación de Vendedores y Logística (k=4).csv"/>
+        <parameter key="column_separator" value=";"/>
+        <parameter key="write_attribute_names" value="true"/>
+        <parameter key="quote_nominal_values" value="true"/>
+        <parameter key="format_date_attributes" value="true"/>
+        <parameter key="date_format" value="yyyy-MM-dd HH:mm:ss"/>
+        <parameter key="append_to_file" value="false"/>
+        <parameter key="encoding" value="SYSTEM"/>
       </operator>
       <operator activated="true" class="blending:select_attributes" compatibility="12.1.001" expanded="true" height="82" name="Select Attributes (4)" width="90" x="581" y="1105">
         <parameter key="type" value="include attributes"/>
@@ -195,11 +209,21 @@
         <parameter key="local_random_seed" value="1992"/>
         <description align="center" color="orange" colored="true" width="126">K-Means&lt;br&gt;Segmentaci&amp;#243;n financiera de las ventas para habitos de compra</description>
       </operator>
-      <operator activated="true" class="cluster_distance_performance" compatibility="12.1.001" expanded="true" height="103" name="Performance K-Means Clustering (k=3) Hábitos y Lealtad del Cliente" width="90" x="1184" y="1105">
+      <operator activated="true" class="cluster_distance_performance" compatibility="12.1.001" expanded="true" height="103" name="Performance K-Means Clustering (k=3) Hábitos y Lealtad del Cliente" width="90" x="1117" y="1105">
         <parameter key="main_criterion" value="Avg. within centroid distance"/>
         <parameter key="main_criterion_only" value="false"/>
         <parameter key="normalize" value="false"/>
         <parameter key="maximize" value="false"/>
+      </operator>
+      <operator activated="true" class="write_csv" compatibility="12.1.001" expanded="true" height="82" name="Write CSV (5)" width="90" x="1318" y="1207">
+        <parameter key="csv_file" value="C:/Users/DEAC/Documents/UDB/CICLO IV 26/DMD/DMD104_G01T_2026/CSV_DatosMineriaSalida/K-Means Segmentación Financiera y Hábitos de Compra (k=3).csv"/>
+        <parameter key="column_separator" value=";"/>
+        <parameter key="write_attribute_names" value="true"/>
+        <parameter key="quote_nominal_values" value="true"/>
+        <parameter key="format_date_attributes" value="true"/>
+        <parameter key="date_format" value="yyyy-MM-dd HH:mm:ss"/>
+        <parameter key="append_to_file" value="false"/>
+        <parameter key="encoding" value="SYSTEM"/>
       </operator>
       <operator activated="true" class="blending:select_attributes" compatibility="12.1.001" expanded="true" height="82" name="Select Attributes (3)" width="90" x="581" y="901">
         <parameter key="type" value="include attributes"/>
@@ -244,7 +268,17 @@
         <parameter key="requirement_decrease_factor" value="0.9"/>
         <enumeration key="must_contain_list"/>
       </operator>
-      <operator activated="true" class="create_association_rules" compatibility="12.1.001" expanded="true" height="82" name="Reglas de Asociación (FP-Growth) Hábitos y Lealtad del Cliente" width="90" x="1184" y="850">
+      <operator activated="true" class="write_csv" compatibility="12.1.001" expanded="true" height="82" name="Write CSV (4)" width="90" x="983" y="1003">
+        <parameter key="csv_file" value="C:/Users/DEAC/Documents/UDB/CICLO IV 26/DMD/DMD104_G01T_2026/CSV_DatosMineriaSalida/Reglas de Asociación (Hábitos y Lealtad del Cliente).csv"/>
+        <parameter key="column_separator" value=";"/>
+        <parameter key="write_attribute_names" value="true"/>
+        <parameter key="quote_nominal_values" value="true"/>
+        <parameter key="format_date_attributes" value="true"/>
+        <parameter key="date_format" value="yyyy-MM-dd HH:mm:ss"/>
+        <parameter key="append_to_file" value="false"/>
+        <parameter key="encoding" value="SYSTEM"/>
+      </operator>
+      <operator activated="true" class="create_association_rules" compatibility="12.1.001" expanded="true" height="82" name="Reglas de Asociación (FP-Growth) Hábitos y Lealtad del Cliente" width="90" x="1117" y="850">
         <parameter key="criterion" value="confidence"/>
         <parameter key="min_confidence" value="0.7"/>
         <parameter key="min_criterion_value" value="0.8"/>
@@ -309,6 +343,16 @@
         <parameter key="normalize" value="false"/>
         <parameter key="maximize" value="false"/>
       </operator>
+      <operator activated="true" class="write_csv" compatibility="12.1.001" expanded="true" height="82" name="Write CSV (3)" width="90" x="1318" y="748">
+        <parameter key="csv_file" value="C:/Users/DEAC/Documents/UDB/CICLO IV 26/DMD/DMD104_G01T_2026/CSV_DatosMineriaSalida/K-Means (Perfilamiento Logístico Global, k=5).csv"/>
+        <parameter key="column_separator" value=";"/>
+        <parameter key="write_attribute_names" value="true"/>
+        <parameter key="quote_nominal_values" value="true"/>
+        <parameter key="format_date_attributes" value="true"/>
+        <parameter key="date_format" value="yyyy-MM-dd HH:mm:ss"/>
+        <parameter key="append_to_file" value="false"/>
+        <parameter key="encoding" value="SYSTEM"/>
+      </operator>
       <operator activated="true" class="concurrency:parallel_decision_tree" compatibility="12.1.001" expanded="true" height="103" name="Árbol de decisión Retrasos Logísticos" width="90" x="715" y="34">
         <parameter key="criterion" value="least_square"/>
         <parameter key="maximal_depth" value="10"/>
@@ -323,24 +367,6 @@
       </operator>
       <operator activated="true" class="apply_model" compatibility="12.1.001" expanded="true" height="82" name="Apply Model Árbol de decisión Retrasos Logísticos" width="90" x="849" y="85">
         <list key="application_parameters"/>
-      </operator>
-      <operator activated="true" class="performance_regression" compatibility="12.1.001" expanded="true" height="82" name="Performance Árbol de decisión Retrasos Logísticos" width="90" x="983" y="34">
-        <parameter key="main_criterion" value="first"/>
-        <parameter key="root_mean_squared_error" value="true"/>
-        <parameter key="absolute_error" value="false"/>
-        <parameter key="relative_error" value="false"/>
-        <parameter key="relative_error_lenient" value="false"/>
-        <parameter key="relative_error_strict" value="false"/>
-        <parameter key="normalized_absolute_error" value="false"/>
-        <parameter key="root_relative_squared_error" value="false"/>
-        <parameter key="squared_error" value="false"/>
-        <parameter key="correlation" value="false"/>
-        <parameter key="squared_correlation" value="false"/>
-        <parameter key="prediction_average" value="false"/>
-        <parameter key="spearman_rho" value="false"/>
-        <parameter key="kendall_tau" value="false"/>
-        <parameter key="skip_undefined_labels" value="true"/>
-        <parameter key="use_example_weights" value="true"/>
       </operator>
       <operator activated="true" class="numerical_to_binominal" compatibility="12.1.001" expanded="true" height="82" name="Numerical to Binominal" width="90" x="581" y="442">
         <parameter key="attribute_filter_type" value="single"/>
@@ -382,7 +408,37 @@
       <operator activated="true" class="apply_model" compatibility="12.1.001" expanded="true" height="82" name="Apply Model Regresión Logística Retrasos Logísticos" width="90" x="849" y="391">
         <list key="application_parameters"/>
       </operator>
-      <operator activated="true" class="performance_binominal_classification" compatibility="12.1.001" expanded="true" height="82" name="Performance Regresión Logística Retrasos Logísticos" width="90" x="1184" y="340">
+      <operator activated="true" class="multiply" compatibility="12.1.001" expanded="true" height="103" name="Multiply (2)" width="90" x="983" y="34"/>
+      <operator activated="true" class="performance_regression" compatibility="12.1.001" expanded="true" height="82" name="Performance Árbol de decisión Retrasos Logísticos" width="90" x="1117" y="34">
+        <parameter key="main_criterion" value="first"/>
+        <parameter key="root_mean_squared_error" value="true"/>
+        <parameter key="absolute_error" value="false"/>
+        <parameter key="relative_error" value="false"/>
+        <parameter key="relative_error_lenient" value="false"/>
+        <parameter key="relative_error_strict" value="false"/>
+        <parameter key="normalized_absolute_error" value="false"/>
+        <parameter key="root_relative_squared_error" value="false"/>
+        <parameter key="squared_error" value="false"/>
+        <parameter key="correlation" value="false"/>
+        <parameter key="squared_correlation" value="false"/>
+        <parameter key="prediction_average" value="false"/>
+        <parameter key="spearman_rho" value="false"/>
+        <parameter key="kendall_tau" value="false"/>
+        <parameter key="skip_undefined_labels" value="true"/>
+        <parameter key="use_example_weights" value="true"/>
+      </operator>
+      <operator activated="true" class="write_csv" compatibility="12.1.001" expanded="true" height="82" name="Write CSV" width="90" x="1318" y="187">
+        <parameter key="csv_file" value="C:/Users/DEAC/Documents/UDB/CICLO IV 26/DMD/DMD104_G01T_2026/CSV_DatosMineriaSalida/Árbol de Decisión (Predicción de Retrasos).csv"/>
+        <parameter key="column_separator" value=";"/>
+        <parameter key="write_attribute_names" value="true"/>
+        <parameter key="quote_nominal_values" value="true"/>
+        <parameter key="format_date_attributes" value="true"/>
+        <parameter key="date_format" value="yyyy-MM-dd HH:mm:ss"/>
+        <parameter key="append_to_file" value="false"/>
+        <parameter key="encoding" value="SYSTEM"/>
+      </operator>
+      <operator activated="true" class="multiply" compatibility="12.1.001" expanded="true" height="103" name="Multiply (3)" width="90" x="983" y="340"/>
+      <operator activated="true" class="performance_binominal_classification" compatibility="12.1.001" expanded="true" height="82" name="Performance Regresión Logística Retrasos Logísticos" width="90" x="1117" y="289">
         <parameter key="manually_set_positive_class" value="false"/>
         <parameter key="main_criterion" value="first"/>
         <parameter key="accuracy" value="true"/>
@@ -409,6 +465,16 @@
         <parameter key="skip_undefined_labels" value="true"/>
         <parameter key="use_example_weights" value="true"/>
       </operator>
+      <operator activated="true" class="write_csv" compatibility="12.1.001" expanded="true" height="82" name="Write CSV (2)" width="90" x="1318" y="442">
+        <parameter key="csv_file" value="C:/Users/DEAC/Documents/UDB/CICLO IV 26/DMD/DMD104_G01T_2026/CSV_DatosMineriaSalida/Regresión Logística (Riesgo Estadístico de Retraso).csv"/>
+        <parameter key="column_separator" value=";"/>
+        <parameter key="write_attribute_names" value="true"/>
+        <parameter key="quote_nominal_values" value="true"/>
+        <parameter key="format_date_attributes" value="true"/>
+        <parameter key="date_format" value="yyyy-MM-dd HH:mm:ss"/>
+        <parameter key="append_to_file" value="false"/>
+        <parameter key="encoding" value="SYSTEM"/>
+      </operator>
       <connect from_op="Read CSV" from_port="output" to_op="Set Role" to_port="example set input"/>
       <connect from_op="Set Role" from_port="example set output" to_op="Select Attributes" to_port="example set input"/>
       <connect from_op="Select Attributes" from_port="example set output" to_op="Multiply" to_port="input"/>
@@ -422,34 +488,42 @@
       <connect from_op="Replace Missing Values (3)" from_port="example set output" to_op="K-Means Clustering (k=4) Evaluación de Vendedores" to_port="example set"/>
       <connect from_op="K-Means Clustering (k=4) Evaluación de Vendedores" from_port="cluster model" to_op="Performance K-Means Clustering (k=4) Evaluación de Vendedores" to_port="cluster model"/>
       <connect from_op="K-Means Clustering (k=4) Evaluación de Vendedores" from_port="clustered set" to_op="Performance K-Means Clustering (k=4) Evaluación de Vendedores" to_port="example set"/>
-      <connect from_op="Performance K-Means Clustering (k=4) Evaluación de Vendedores" from_port="performance" to_port="result 10"/>
-      <connect from_op="Performance K-Means Clustering (k=4) Evaluación de Vendedores" from_port="cluster model" to_port="result 11"/>
+      <connect from_op="Performance K-Means Clustering (k=4) Evaluación de Vendedores" from_port="performance" to_port="result 9"/>
+      <connect from_op="Performance K-Means Clustering (k=4) Evaluación de Vendedores" from_port="example set" to_op="Write CSV (6)" to_port="input"/>
+      <connect from_op="Performance K-Means Clustering (k=4) Evaluación de Vendedores" from_port="cluster model" to_port="result 10"/>
       <connect from_op="Select Attributes (4)" from_port="example set output" to_op="Replace Missing Values (2)" to_port="example set input"/>
       <connect from_op="Replace Missing Values (2)" from_port="example set output" to_op="K-Means Clustering (k=3) Hábitos y Lealtad del Cliente" to_port="example set"/>
       <connect from_op="K-Means Clustering (k=3) Hábitos y Lealtad del Cliente" from_port="cluster model" to_op="Performance K-Means Clustering (k=3) Hábitos y Lealtad del Cliente" to_port="cluster model"/>
       <connect from_op="K-Means Clustering (k=3) Hábitos y Lealtad del Cliente" from_port="clustered set" to_op="Performance K-Means Clustering (k=3) Hábitos y Lealtad del Cliente" to_port="example set"/>
-      <connect from_op="Performance K-Means Clustering (k=3) Hábitos y Lealtad del Cliente" from_port="performance" to_port="result 8"/>
-      <connect from_op="Performance K-Means Clustering (k=3) Hábitos y Lealtad del Cliente" from_port="cluster model" to_port="result 9"/>
+      <connect from_op="Performance K-Means Clustering (k=3) Hábitos y Lealtad del Cliente" from_port="performance" to_port="result 7"/>
+      <connect from_op="Performance K-Means Clustering (k=3) Hábitos y Lealtad del Cliente" from_port="example set" to_op="Write CSV (5)" to_port="input"/>
+      <connect from_op="Performance K-Means Clustering (k=3) Hábitos y Lealtad del Cliente" from_port="cluster model" to_port="result 8"/>
       <connect from_op="Select Attributes (3)" from_port="example set output" to_op="Nominal to Binominal" to_port="example set input"/>
       <connect from_op="Nominal to Binominal" from_port="example set output" to_op="FP-Growth" to_port="example set"/>
+      <connect from_op="FP-Growth" from_port="example set" to_op="Write CSV (4)" to_port="input"/>
       <connect from_op="FP-Growth" from_port="frequent sets" to_op="Reglas de Asociación (FP-Growth) Hábitos y Lealtad del Cliente" to_port="item sets"/>
-      <connect from_op="Reglas de Asociación (FP-Growth) Hábitos y Lealtad del Cliente" from_port="rules" to_port="result 7"/>
+      <connect from_op="Reglas de Asociación (FP-Growth) Hábitos y Lealtad del Cliente" from_port="rules" to_port="result 11"/>
       <connect from_op="Select Attributes (2)" from_port="example set output" to_op="Replace Missing Values" to_port="example set input"/>
       <connect from_op="Replace Missing Values" from_port="example set output" to_op="K-Means Clustering (k=5) Perfilamiento Logístico Global" to_port="example set"/>
       <connect from_op="K-Means Clustering (k=5) Perfilamiento Logístico Global" from_port="cluster model" to_op="K-Means Clustering (k=5) Perfilamiento Logístico Global (2)" to_port="cluster model"/>
       <connect from_op="K-Means Clustering (k=5) Perfilamiento Logístico Global" from_port="clustered set" to_op="K-Means Clustering (k=5) Perfilamiento Logístico Global (2)" to_port="example set"/>
       <connect from_op="K-Means Clustering (k=5) Perfilamiento Logístico Global (2)" from_port="performance" to_port="result 5"/>
+      <connect from_op="K-Means Clustering (k=5) Perfilamiento Logístico Global (2)" from_port="example set" to_op="Write CSV (3)" to_port="input"/>
       <connect from_op="K-Means Clustering (k=5) Perfilamiento Logístico Global (2)" from_port="cluster model" to_port="result 6"/>
       <connect from_op="Árbol de decisión Retrasos Logísticos" from_port="model" to_op="Apply Model Árbol de decisión Retrasos Logísticos" to_port="model"/>
       <connect from_op="Árbol de decisión Retrasos Logísticos" from_port="exampleSet" to_op="Apply Model Árbol de decisión Retrasos Logísticos" to_port="unlabelled data"/>
-      <connect from_op="Apply Model Árbol de decisión Retrasos Logísticos" from_port="labelled data" to_op="Performance Árbol de decisión Retrasos Logísticos" to_port="labelled data"/>
+      <connect from_op="Apply Model Árbol de decisión Retrasos Logísticos" from_port="labelled data" to_op="Multiply (2)" to_port="input"/>
       <connect from_op="Apply Model Árbol de decisión Retrasos Logísticos" from_port="model" to_port="result 2"/>
-      <connect from_op="Performance Árbol de decisión Retrasos Logísticos" from_port="performance" to_port="result 1"/>
       <connect from_op="Numerical to Binominal" from_port="example set output" to_op="Regresión Logística Retrasos Logísticos" to_port="training set"/>
       <connect from_op="Regresión Logística Retrasos Logísticos" from_port="model" to_op="Apply Model Regresión Logística Retrasos Logísticos" to_port="model"/>
       <connect from_op="Regresión Logística Retrasos Logísticos" from_port="exampleSet" to_op="Apply Model Regresión Logística Retrasos Logísticos" to_port="unlabelled data"/>
-      <connect from_op="Apply Model Regresión Logística Retrasos Logísticos" from_port="labelled data" to_op="Performance Regresión Logística Retrasos Logísticos" to_port="labelled data"/>
+      <connect from_op="Apply Model Regresión Logística Retrasos Logísticos" from_port="labelled data" to_op="Multiply (3)" to_port="input"/>
       <connect from_op="Apply Model Regresión Logística Retrasos Logísticos" from_port="model" to_port="result 4"/>
+      <connect from_op="Multiply (2)" from_port="output 1" to_op="Performance Árbol de decisión Retrasos Logísticos" to_port="labelled data"/>
+      <connect from_op="Multiply (2)" from_port="output 2" to_op="Write CSV" to_port="input"/>
+      <connect from_op="Performance Árbol de decisión Retrasos Logísticos" from_port="performance" to_port="result 1"/>
+      <connect from_op="Multiply (3)" from_port="output 1" to_op="Performance Regresión Logística Retrasos Logísticos" to_port="labelled data"/>
+      <connect from_op="Multiply (3)" from_port="output 2" to_op="Write CSV (2)" to_port="input"/>
       <connect from_op="Performance Regresión Logística Retrasos Logísticos" from_port="performance" to_port="result 3"/>
       <portSpacing port="source_input 1" spacing="0"/>
       <portSpacing port="sink_result 1" spacing="0"/>
