@@ -268,7 +268,19 @@
         <parameter key="requirement_decrease_factor" value="0.9"/>
         <enumeration key="must_contain_list"/>
       </operator>
-      <operator activated="true" class="write_csv" compatibility="12.1.001" expanded="true" height="82" name="Write CSV (4)" width="90" x="983" y="1003">
+      <operator activated="true" class="create_association_rules" compatibility="12.1.001" expanded="true" height="82" name="Reglas de Asociación (FP-Growth) Hábitos y Lealtad del Cliente" width="90" x="1117" y="850">
+        <parameter key="criterion" value="confidence"/>
+        <parameter key="min_confidence" value="0.7"/>
+        <parameter key="min_criterion_value" value="0.8"/>
+        <parameter key="gain_theta" value="2.0"/>
+        <parameter key="laplace_k" value="1.0"/>
+        <description align="center" color="orange" colored="true" width="126">Reglas de Asociaci&amp;#243;n&lt;br&gt;Enfocado en la detecci&amp;#243;n de patrones de compra</description>
+      </operator>
+      <operator activated="true" class="item_sets_to_data" compatibility="12.1.001" expanded="true" height="82" name="Item Sets to Data" width="90" x="1251" y="952">
+        <parameter key="generate_item_set_indicators" value="false"/>
+        <parameter key="data_management" value="auto"/>
+      </operator>
+      <operator activated="true" class="write_csv" compatibility="12.1.001" expanded="true" height="82" name="Write CSV (4)" width="90" x="1385" y="952">
         <parameter key="csv_file" value="C:/Users/DEAC/Documents/UDB/CICLO IV 26/DMD/DMD104_G01T_2026/CSV_DatosMineriaSalida/Reglas de Asociación (Hábitos y Lealtad del Cliente).csv"/>
         <parameter key="column_separator" value=";"/>
         <parameter key="write_attribute_names" value="true"/>
@@ -277,14 +289,6 @@
         <parameter key="date_format" value="yyyy-MM-dd HH:mm:ss"/>
         <parameter key="append_to_file" value="false"/>
         <parameter key="encoding" value="SYSTEM"/>
-      </operator>
-      <operator activated="true" class="create_association_rules" compatibility="12.1.001" expanded="true" height="82" name="Reglas de Asociación (FP-Growth) Hábitos y Lealtad del Cliente" width="90" x="1117" y="850">
-        <parameter key="criterion" value="confidence"/>
-        <parameter key="min_confidence" value="0.7"/>
-        <parameter key="min_criterion_value" value="0.8"/>
-        <parameter key="gain_theta" value="2.0"/>
-        <parameter key="laplace_k" value="1.0"/>
-        <description align="center" color="orange" colored="true" width="126">Reglas de Asociaci&amp;#243;n&lt;br&gt;Enfocado en la detecci&amp;#243;n de patrones de compra</description>
       </operator>
       <operator activated="true" class="blending:select_attributes" compatibility="12.1.001" expanded="true" height="82" name="Select Attributes (2)" width="90" x="581" y="748">
         <parameter key="type" value="include attributes"/>
@@ -500,9 +504,10 @@
       <connect from_op="Performance K-Means Clustering (k=3) Hábitos y Lealtad del Cliente" from_port="cluster model" to_port="result 8"/>
       <connect from_op="Select Attributes (3)" from_port="example set output" to_op="Nominal to Binominal" to_port="example set input"/>
       <connect from_op="Nominal to Binominal" from_port="example set output" to_op="FP-Growth" to_port="example set"/>
-      <connect from_op="FP-Growth" from_port="example set" to_op="Write CSV (4)" to_port="input"/>
       <connect from_op="FP-Growth" from_port="frequent sets" to_op="Reglas de Asociación (FP-Growth) Hábitos y Lealtad del Cliente" to_port="item sets"/>
       <connect from_op="Reglas de Asociación (FP-Growth) Hábitos y Lealtad del Cliente" from_port="rules" to_port="result 11"/>
+      <connect from_op="Reglas de Asociación (FP-Growth) Hábitos y Lealtad del Cliente" from_port="item sets" to_op="Item Sets to Data" to_port="frequent item sets"/>
+      <connect from_op="Item Sets to Data" from_port="example set" to_op="Write CSV (4)" to_port="input"/>
       <connect from_op="Select Attributes (2)" from_port="example set output" to_op="Replace Missing Values" to_port="example set input"/>
       <connect from_op="Replace Missing Values" from_port="example set output" to_op="K-Means Clustering (k=5) Perfilamiento Logístico Global" to_port="example set"/>
       <connect from_op="K-Means Clustering (k=5) Perfilamiento Logístico Global" from_port="cluster model" to_op="K-Means Clustering (k=5) Perfilamiento Logístico Global (2)" to_port="cluster model"/>
